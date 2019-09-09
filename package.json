@@ -61,7 +61,7 @@
     "@angular/cli": "~7.3.0",
     "@angular/compiler-cli": "^7.2.3",
     "@angular/language-service": "^8.2.5",
-    "@biesbjerg/ngx-translate-extract": "^2.3.4",
+    "@biesbjerg/ngx-translate-extract": "^3.0.5",
     "@ngx-rocket/scripts": "^3.0.4",
     "@types/algoliasearch": "^3.30.18",
     "@types/jasmine": "^3.4.0",
