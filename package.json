@@ -41,7 +41,7 @@
     "angular-feather": "^6.0.2",
     "angular-instantsearch": "^3.0.0-beta.4",
     "bootstrap": "^4.1.1",
-    "core-js": "^2.6.3",
+    "core-js": "^3.3.2",
     "decode-html-entities": "^1.1.10",
     "instantsearch.css": "^7.3.1",
     "instantsearch.js": "^3.6.0",
