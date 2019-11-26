@@ -67,7 +67,7 @@
     "@types/algoliasearch": "^3.30.18",
     "@types/jasmine": "^3.4.0",
     "@types/jasminewd2": "^2.0.3",
-    "@types/node": "^8.10.54",
+    "@types/node": "^12.12.14",
     "codelyzer": "^5.0.0",
     "hads": "^2.0.1",
     "htmlhint": "^0.11.0",
