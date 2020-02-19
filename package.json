@@ -46,7 +46,7 @@
     "angular-feather": "^6.0.2",
     "angular-instantsearch": "^3.0.0-beta.4",
     "bootstrap": "^4.1.1",
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.5",
     "core-js": "^2.6.3",
     "decode-html-entities": "^1.1.10",
     "flashgrid": "^1.1.1",
