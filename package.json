@@ -52,7 +52,7 @@
     "flashgrid": "^1.1.1",
     "instantsearch.css": "^7.3.1",
     "instantsearch.js": "^3.6.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ng-lazyload-image": "^7.0.1",
     "ng2-tooltip-directive": "^2.9.20",
