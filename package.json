@@ -78,7 +78,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "hads": "^2.1.0",
-    "htmlhint": "^0.11.0",
+    "htmlhint": "^0.14.0",
     "https-proxy-agent": "^2.2.4",
     "husky": "^3.1.0",
     "jasmine-core": "~3.4.0",
