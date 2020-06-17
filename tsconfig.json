@@ -13,23 +13,14 @@
     "experimentalDecorators": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "paths": {
-      "@app/*": [
-        "app/*"
-      ],
-      "@env/*": [
-        "environments/*"
-      ]
+      "@app/*": ["app/*"],
+      "@env/*": ["environments/*"]
     },
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "typeRoots": ["node_modules/@types"]
   },
   "allowJs": true
 }
