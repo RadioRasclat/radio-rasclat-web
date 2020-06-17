@@ -7,7 +7,14 @@
 <img src="https://david-dm.org/dmnktoe/radio-rasclat-web/status.svg">
 </p>
 
-Radio Rasclat is a non-commercial internet radio station which is going to stream your music to the web, again! It offers you a platform to play & try out. It serves as a place for the exchange, dialogue and cooperation of music. Founded and curated in 2019, the radio returns to the new venue at KMMN 3. Submit your music via e-mail ([office@radio-rasclat.com](mailto:office@radio-rasclat.com)) to get your own show slot or appearance. Or just listen live on [radio-rasclat.com](https://radio-rasclat.com/).
+Radio Rasclat is a non-commercial internet radio station which is going to
+stream your music to the web, again! It offers you a platform to play & try out.
+It serves as a place for the exchange, dialogue and cooperation of music.
+Founded and curated in 2019, the radio returns to the new venue at KMMN 3.
+Submit your music via e-mail
+([office@radio-rasclat.com](mailto:office@radio-rasclat.com)) to get your own
+show slot or appearance. Or just listen live on
+[radio-rasclat.com](https://radio-rasclat.com/).
 
 ## Community
 
@@ -60,24 +67,27 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 | npm run translations:extract  | Extract strings from code and templates to `src/app/translations/template.json` |
 | npm run docs                  | Display project documentation                                                   |
 
-When building the application, you can specify the target environment using the additional flag `--env <name>` (do not
-forget to prepend `--` to pass arguments to npm scripts).
+When building the application, you can specify the target environment using the
+additional flag `--env <name>` (do not forget to prepend `--` to pass arguments
+to npm scripts).
 
 The default build environment is `prod`.
 
 ### Starting the Server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change
-any of the source files.
-You should not use `ng serve` directly, as it does not use the backend proxy configuration by default.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app
+will automatically reload if you change any of the source files. You should not
+use `ng serve` directly, as it does not use the backend proxy configuration by
+default.
 
 ### Code Scaffolding
 
-Run `npm run generate -- component <name>` to generate a new component. You can also use
-`npm run generate -- directive|pipe|service|class|module`.
+Run `npm run generate -- component <name>` to generate a new component. You can
+also use `npm run generate -- directive|pipe|service|class|module`.
 
-If you have installed [angular-cli](https://github.com/angular/angular-cli) globally with `npm install -g @angular/cli`,
-you can also use the command `ng generate` directly.
+If you have installed [angular-cli](https://github.com/angular/angular-cli)
+globally with `npm install -g @angular/cli`, you can also use the command
+`ng generate` directly.
 
 ## Licences
 
