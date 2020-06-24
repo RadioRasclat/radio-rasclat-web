@@ -8,8 +8,7 @@ addons:
   chrome: stable
   sonarcloud:
     organization: 'dmnktoe'
-    token:
-      secure: 'o+oEs8v7uajkxTrWNgh5L7SxYvK9hvUaf4fFvN/90U7SB6r5uersjShT1JWZoqZXe7XWxFxEFrORjweK/E8maaCvHnxPM4kDwrtA2SYfu0bZPkt2Cew6JbvVaDi6kHF9+edbSZDJY/6jul73EnA7GPejiO6bxTOfU5iRX+m3eTcCp2LnHXxOr8mbyUaSQgnuI+EivfsTnpECun/s+9/K8ro8m/IeuO/wWODakc0tcIIcDEGbY5X9K2SuWCENtQMUDuJFklI3NTmeID0F8axJ+nWLk1H1+Md/HPKFvduOm9WpCHRImg7sB3OBk3lTDjyLjaFHmjxiXLT1J5jqSqVGJBUxBwzy8aWA+FTp/eUhxAJrnuq7eqo+lR1FzO0LbRE+GmSl6fSP91/cabNH9sp7EZNkzMMKLUeCy6FqW3CycBRznMgw+rhkf15TonHQl10LJ/f4UZxfUR8DKCYTdVwOV6chQV7AT5oqtyfi2I7VkE8Pydxr9p7Ule/cROHyfvzznISMNvv+64Um56CD9WFfX0G0iij18gS9ha3nzC1YfVj4o0AkvLTZxAXfJlB+WhImv6BQVcd9RNJshK7Jk9iqx48mnilv6nShsEI3AvvZosKQaONDhQUGarL6RParhoOcmwHJGT+X7GcloZ378a1IEW5OtjbBTI64yOE7T8iAmKg='
+    token: ${SONAR_TOKEN}
 
 cache:
   directories:
