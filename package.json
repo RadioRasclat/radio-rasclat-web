@@ -36,7 +36,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "@ngx-translate/core": "^12.1.2",
-    "@sentry/browser": "^5.17.0",
+    "@sentry/browser": "^5.18.0",
     "@sentry/cli": "^1.54.0",
     "@sentry/integrations": "^5.17.0",
     "@types/algoliasearch-helper": "^2.26.1",
