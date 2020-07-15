@@ -39,7 +39,7 @@
     "@ngx-translate/core": "^12.1.2",
     "@sentry/browser": "^5.17.0",
     "@sentry/cli": "^1.54.0",
-    "@sentry/integrations": "^5.17.0",
+    "@sentry/integrations": "^5.19.2",
     "@types/algoliasearch-helper": "^2.26.1",
     "@types/jquery": "^3.3.38",
     "algoliasearch": "^3.35.1",
