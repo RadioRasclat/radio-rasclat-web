@@ -50,7 +50,7 @@
     "instantsearch.css": "^7.4.2",
     "instantsearch.js": "^3.7.0",
     "moment": "^2.27.0",
-    "ng-lazyload-image": "^8.0.1",
+    "ng-lazyload-image": "^9.0.0",
     "ng2-tooltip-directive": "^2.9.22",
     "ngx-swiper-wrapper": "^9.0.1",
     "ngx-timeago": "^1.0.4",
