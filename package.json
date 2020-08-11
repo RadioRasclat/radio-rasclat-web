@@ -43,7 +43,7 @@
     "@types/algoliasearch-helper": "^2.26.1",
     "algoliasearch": "^3.35.1",
     "angular-instantsearch": "^3.0.0-beta.5",
-    "angulartics2": "9.1.0",
+    "angulartics2": "10.0.0",
     "codecov": "^3.7.2",
     "core-js": "^3.6.5",
     "flashgrid": "^1.1.1",
