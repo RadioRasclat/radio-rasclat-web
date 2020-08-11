@@ -95,7 +95,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended-scss": "~4.2.0",
     "stylelint-config-standard": "~20.0.0",
-    "stylelint-scss": "~3.17.2",
+    "stylelint-scss": "~3.18.0",
     "ts-node": "~8.10.2",
     "tslint": "~6.1.0",
     "tslint-config-prettier": "^1.14.0",
