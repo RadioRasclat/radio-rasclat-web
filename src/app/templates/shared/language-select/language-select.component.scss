@@ -1,0 +1,30 @@
+.language__single {
+  width: 100%;
+  display: block;
+  position: relative;
+  border-radius: 5px;
+}
+
+.language__single__wrapper {
+  background: var(--card-light-background);
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 0.15s ease;
+}
+
+.language__single__wrapper:hover {
+  background: var(--card-light-background-hover);
+  cursor: pointer;
+}
+
+.progressbar {
+  position: absolute;
+  background: rgb(0 0 0 / 0.05);
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.translationProgress {
+  font-weight: 200;
+}

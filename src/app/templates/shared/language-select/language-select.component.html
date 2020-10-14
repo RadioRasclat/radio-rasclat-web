@@ -1,14 +1,20 @@
-<div class="languages" *ngIf="!isLoading == true">
-  <div class="grid-auto-lg">
+<div class="languages" *ngIf="!isLoading">
+  <div class="grid-auto-md grid-gap-sm">
     <div
       class="language__single"
       [hidden]="isLoading"
       *ngFor="let language of languages"
     >
+      <div
+        class="progressbar"
+        [style.width.%]="language.translationProgress"
+      ></div>
       <div class="language__single__wrapper">
-        <flag-icon country="{{ language.code }}" squared></flag-icon>
+        <flag-icon country="{{ language.twoLettersCode }}"></flag-icon>
         {{ language.name }}
-        {{ language.translated_progress }}%
+        <span class="translationProgress"
+          >{{ language.translationProgress }}%</span
+        >
       </div>
     </div>
   </div>

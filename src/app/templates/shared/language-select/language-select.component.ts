@@ -8,7 +8,7 @@ import { finalize } from 'rxjs/operators';
   styleUrls: ['./language-select.component.scss'],
 })
 export class LanguageSelectComponent implements OnInit {
-  languages = '';
+  languages: any;
   isLoading = false;
 
   constructor(private apiService: ApiService) {}
