@@ -18,11 +18,11 @@ jobs:
   include:
     - stage: Lint
       script: npm run lint
+    - stage: Build
+      script: npm run build
     - stage: Test
       script: npm test
     - script: ng e2e
-    - stage: Build
-      script: npm run build
     - stage: Sentry Deploy
       script: bash sentry-deploy.sh
 
