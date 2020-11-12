@@ -11,7 +11,7 @@ cache:
   directories:
     - ./node_modules
     - ~/.cache
-    - cypress/*
+    - ~/Cypress/*
 
 install:
   - npm install
