@@ -5,7 +5,6 @@ import { I18nService } from '@app/core';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
