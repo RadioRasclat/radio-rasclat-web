@@ -87,9 +87,9 @@
             class="playerInfo"
             *ngIf="!state?.currentTrack.currentTitle && state?.live"
           >
-            <h5>OFF AIR.</h5>
+            <h5>{{ 'offAir' | translate }}.</h5>
             <span class="nextShow" *ngIf="state?.nextShowName">
-              Nächste Show: {{ state?.nextShowName }}
+              {{ 'nextUp' | translate }}: {{ state?.nextShowName }}
               <span class="nextShow__time"
                 >&mdash; {{ state?.nextShowStart }}</span
               >

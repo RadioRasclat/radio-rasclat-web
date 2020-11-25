@@ -20,7 +20,7 @@
               : (currentShowName | safeHtml)
           }}
         </span>
-        <span *ngIf="!currentShowName">OFF AIR.</span>
+        <span *ngIf="!currentShowName">{{ 'offAir' | translate }}.</span>
       </span>
     </span>
   </span>
@@ -42,7 +42,7 @@
               : (currentShowName | safeHtml)
           }}
         </span>
-        <span *ngIf="!currentShowName">OFF AIR.</span>
+        <span *ngIf="!currentShowName">{{ 'offAir' | translate }}.</span>
       </span>
     </span>
   </span>
