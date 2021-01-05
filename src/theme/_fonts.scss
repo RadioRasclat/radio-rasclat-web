@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Apercu";
+  src: url("./../assets/fonts/ApercuPro.woff2") format("woff2"),
+    url("./../assets/fonts/ApercuPro.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Trash Light";
   src: url("./../assets/fonts/Trash-Light.woff2") format("woff2"),
     url("./../assets/fonts/Trash-Light.woff") format("woff");
