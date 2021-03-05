@@ -5,9 +5,11 @@
   Input,
   OnInit,
   OnDestroy,
+  ViewChild,
 } from '@angular/core';
 
 import { ModalService } from '@app/core/services/modal.service';
+import { NgBodyScrollLockService } from 'ng-body-scroll-lock';
 
 @Component({
   selector: 'modal',
@@ -17,9 +19,14 @@ import { ModalService } from '@app/core/services/modal.service';
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;
+  @ViewChild('modal', { static: true }) ModalRef: ElementRef;
   private element: any;
 
-  constructor(private modalService: ModalService, private el: ElementRef) {
+  constructor(
+    private modalService: ModalService,
+    private el: ElementRef,
+    private bodyScrollLock: NgBodyScrollLockService
+  ) {
     this.element = el.nativeElement;
   }
 
@@ -57,6 +64,7 @@ export class ModalComponent implements OnInit, OnDestroy {
   open(): void {
     this.element.style.display = 'block';
     document.body.classList.add('modal-open');
+    this.bodyScrollLock.DisableBodyScroll(this.ModalRef.nativeElement);
   }
 
   // close modal
