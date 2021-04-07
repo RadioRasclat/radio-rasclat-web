@@ -24,7 +24,11 @@
     </div>
   </div>
 </header>
-<nav *ngIf="isNavVisible">
+<nav
+  *ngIf="isNavVisible"
+  [class.navVisible]="isNavVisible"
+  class="animate__animated animate__fadeIn animate__faster"
+>
   <div class="infoBanner">
     <div class="container">
       <div class="grid grid-gap-xs">
