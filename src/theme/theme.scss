@@ -137,6 +137,7 @@ hr {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: var(--transition-time);
 }
 
 a.underline {
@@ -152,6 +153,7 @@ a:hover {
 
 p a {
   text-decoration: underline;
+  transition: var(--transition-time);
 }
 
 p a:hover {
@@ -199,6 +201,7 @@ li:last-child {
 
 li a {
   text-decoration: underline;
+  transition: var(--transition-time);
 }
 
 li a:hover {
