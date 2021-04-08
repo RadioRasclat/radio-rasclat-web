@@ -148,6 +148,10 @@
     border-radius: var(--border-radius);
   }
 
+  .recording__tags__single:hover {
+    text-decoration: underline;
+  }
+
   .recording__tags .recording__tags__single a {
     transition: var(--transition-time);
     color: var(--secondary-color);
