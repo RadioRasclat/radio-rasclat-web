@@ -1,17 +1,17 @@
 .recordingSingle {
   border-bottom: 1px solid var(--card-border);
-  padding: 0;
+  padding: 0 0 2rem;
   margin-top: 1rem;
 }
 
 .recording__info__container {
   width: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   border-bottom: solid 1px var(--card-border);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   .recording__tags {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .recording__tags__single::after {
@@ -27,7 +27,8 @@
   }
 
   .recording__dates {
-    margin-bottom: 1rem;
+    color: #a7a7a7;
+    font-weight: 800;
   }
 
   .recording__title {
@@ -37,20 +38,30 @@
   .recording__title h1 {
     line-height: 30px;
   }
-
-  .recording__artists img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: -10px;
-    border: 2px solid var(--card-background);
-    object-fit: cover;
-  }
 }
 
 .recording__description__container {
   width: 100%;
   margin-bottom: 2rem;
+}
+
+.recording__artists {
+  background: var(--card-light-background);
+  border-radius: var(--card-border-radius);
+  padding: 2rem;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: -10px;
+    border: 2px solid var(--card-background);
+    object-fit: cover;
+  }
 }
 
 .recording__image__container {
@@ -69,7 +80,7 @@
   text-align: center;
 
   .btn {
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 1rem 0;
   }
 
   .btn:last-child {
@@ -114,10 +125,6 @@
 }
 
 @media only screen and (min-width: 48rem) {
-  .recordingSingle {
-    padding: 0 0 2rem;
-  }
-
   .recording__controls {
     margin: 2rem 0 1.5rem;
   }
@@ -128,19 +135,42 @@
     }
   }
 
+  .recording__tags__single {
+    background: var(--secondary-color-light);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--border-radius);
+  }
+
+  .recording__tags .recording__tags__single a {
+    transition: var(--transition-time);
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+
+  .recording__tags .recording__tags__single::after {
+    content: "";
+  }
+
   .recording__image__container {
     padding: 0;
   }
 }
 
 @media only screen and (min-width: 64rem) {
-  .recording__controls {
-    margin: 2rem 0;
-  }
-
   .recordingSingle {
     border-bottom: 1px solid var(--card-border);
     padding: 0 0 4rem 0;
+  }
+
+  .recording__controls {
+    margin: 2rem 0;
   }
 
   .recording__info__container {
