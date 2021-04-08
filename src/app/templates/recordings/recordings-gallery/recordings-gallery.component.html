@@ -73,3 +73,75 @@
     ></div>
   </div>
 </div>
+
+<div class="recordingGallery" *ngIf="isLoading">
+  <div class="grid-auto-lg">
+    <ng-container *ngFor="let i of [].constructor(8)">
+      <div class="recording">
+        <div class="recording__wrapper">
+          <div class="recording__info__container">
+            <div class="recording__tags">
+              <span class="recording__tags__single"> </span>
+            </div>
+            <div class="recording__dates">
+              <span>
+                <ngx-skeleton-loader
+                  count="4"
+                  [theme]="{
+                    height: '1.7rem',
+                    width: '4rem',
+                    'border-radius': '25px',
+                    'margin-right': '0.4rem'
+                  }"
+                ></ngx-skeleton-loader>
+              </span>
+              <span>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '1rem',
+                    width: '100%',
+                    'border-radius': '25px',
+                    'margin-right': '0.4rem'
+                  }"
+                ></ngx-skeleton-loader>
+              </span>
+            </div>
+            <div class="recording__title">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  height: '1.2rem',
+                  width: '100%',
+                  'border-radius': '25px'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+          </div>
+          <div class="recording__image__container">
+            <ngx-skeleton-loader
+              count="1"
+              [theme]="{ height: '15rem', width: '100%' }"
+            >
+            </ngx-skeleton-loader>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <div
+      class="recording placeholder"
+      [hidden]="isLoading"
+      *ngIf="recordings?.length == 2"
+    ></div>
+    <div
+      class="recording placeholder"
+      [hidden]="isLoading"
+      *ngIf="recordings?.length == 1"
+    ></div>
+    <div
+      class="recording placeholder"
+      [hidden]="isLoading"
+      *ngIf="recordings?.length == 1"
+    ></div>
+  </div>
+</div>

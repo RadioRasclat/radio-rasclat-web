@@ -12,16 +12,12 @@
   >
   </app-slideshow>
 
-  <app-text-seperator
-    [hidden]="isLoading"
-    [text]="'latestBroadcasts' | translate"
-    [isLink]="false"
-  >
+  <app-text-seperator [text]="'latestBroadcasts' | translate" [isLink]="false">
   </app-text-seperator>
 
   <app-recordings-gallery
     [recordings]="recordings"
-    [hidden]="isLoading"
+    [isLoading]="isLoading"
     [limit]="8"
   >
   </app-recordings-gallery>
