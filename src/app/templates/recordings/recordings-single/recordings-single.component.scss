@@ -45,6 +45,10 @@
   margin-bottom: 2rem;
 }
 
+.recording__description__container img {
+  max-width: 100%;
+}
+
 .recording__artists {
   background: var(--card-light-background);
   border-radius: var(--card-border-radius);
