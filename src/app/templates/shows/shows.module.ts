@@ -13,6 +13,7 @@ import { ApiService } from '@app/core/services/api.service';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { RecordingsModule } from '../recordings/recordings.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     SwiperModule,
     RecordingsModule,
     LazyLoadImageModule,
+    NgxSkeletonLoaderModule,
   ],
   declarations: [ShowsComponent, ShowsGalleryComponent, ShowsSingleComponent],
   exports: [ShowsGalleryComponent],
