@@ -24,36 +24,6 @@ export class HomeComponent implements OnInit {
   isLoading = false;
   today: any;
 
-  public config: SwiperConfigInterface = {
-    a11y: true,
-    direction: 'horizontal',
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 5000,
-    },
-    breakpoints: {
-      // when window width is <= 640px
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      990: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-  };
-
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
