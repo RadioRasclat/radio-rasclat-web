@@ -45,8 +45,10 @@
   margin-bottom: 2rem;
 }
 
-.recording__description__container p img {
-  max-width: 100%;
+::ng-deep {
+  .recording__description__container p img {
+    max-width: 100%;
+  }
 }
 
 .recording__artists {
