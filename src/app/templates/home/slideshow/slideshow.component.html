@@ -118,7 +118,7 @@
           </div>
           <div
             class="swiper-slide"
-            *ngFor="let recording of recordings | slice: 0:2; let i = index"
+            *ngFor="let recording of recordings | slice: 0:1; let i = index"
           >
             <div
               class="slideshowSlide"
@@ -130,7 +130,32 @@
                   <div class="slideshowSlideCaptionWrapper">
                     <div class="slideshowSlideCaption">
                       <div class="slideshowSlideCaption__textArea">
-                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | timeago }}:<br />
+                        <h4>{{ recording?.title }}</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            *ngFor="let recording of recordings | slice: 1:2; let i = index"
+          >
+            <div
+              class="slideshowSlide"
+              [defaultImage]="defaultImage"
+              [lazyLoad]="recording?.image"
+            >
+              <a routerLink="/broadcasts/{{ recording?.slug }}">
+                <div class="slideshowSlideInner">
+                  <div class="slideshowSlideCaptionWrapper">
+                    <div class="slideshowSlideCaption">
+                      <div class="slideshowSlideCaption__textArea">
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }} •
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
                         <h4>{{ recording?.title }}</h4>
                       </div>
@@ -190,7 +215,7 @@
           </div>
           <div
             class="swiper-slide"
-            *ngFor="let recording of recordings | slice: 2:4; let i = index"
+            *ngFor="let recording of recordings | slice: 2:5; let i = index"
           >
             <div
               class="slideshowSlide"
@@ -202,7 +227,8 @@
                   <div class="slideshowSlideCaptionWrapper">
                     <div class="slideshowSlideCaption">
                       <div class="slideshowSlideCaption__textArea">
-                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }} •
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
                         <h4>{{ recording?.title }}</h4>
                       </div>
