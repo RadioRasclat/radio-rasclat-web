@@ -48,13 +48,13 @@
     <div class="col-12 col-6@md">
       <app-text-seperator
         [text]="('shows' | translate) + ' >'"
+        [isLoading]="isLoading"
         [isLink]="true"
         [url]="'/shows'"
-        [hidden]="isLoading"
       ></app-text-seperator>
 
       <app-shows-gallery
-        [hidden]="isLoading"
+        [isLoading]="isLoading"
         [shows]="shows"
         [limit]="1"
       ></app-shows-gallery>
@@ -62,9 +62,9 @@
     <div class="col-12 col-6@md scheduleColumn">
       <app-text-seperator
         [text]="('schedule' | translate) + ' >'"
+        [isLoading]="isLoading"
         [isLink]="true"
         [url]="'/schedule'"
-        [hidden]="isLoading"
       ></app-text-seperator>
 
       <app-schedule-day-list
