@@ -2,19 +2,13 @@
   padding: 2rem 0 1.5rem;
   text-align: center;
   font-family: "Trash", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-bottom: 1px solid var(--card-border);
 }
 
 .textSeperator.active {
   background: var(--card-background-hover);
   transition: var(--transition-time);
-}
-
-@media only screen and (min-width: 32rem) {
-  .textSeperator {
-    font-size: 2rem;
-  }
 }
 
 @media only screen and (min-width: 48rem) {

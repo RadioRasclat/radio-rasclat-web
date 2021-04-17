@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TextSeperatorComponent implements OnInit {
   @Input() text: string;
   @Input() isLink: boolean;
+  @Input() isLoading: boolean;
   @Input() border: boolean;
   @Input() active: boolean;
   @Input() url: string;
