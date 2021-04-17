@@ -1,5 +1,9 @@
-<div class="container">
+<div class="container" *ngIf="!isLoading">
   <app-page-title [title]="'shows' | translate"></app-page-title>
-
   <app-shows-gallery [shows]="shows" [hidden]="isLoading"></app-shows-gallery>
+</div>
+
+<div class="container" *ngIf="isLoading">
+  <app-page-title [title]="'shows' | translate"></app-page-title>
+  <app-shows-gallery [isLoading]="isLoading" [limit]="6"> </app-shows-gallery>
 </div>
