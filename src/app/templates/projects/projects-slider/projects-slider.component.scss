@@ -1,0 +1,37 @@
+.projectsSlideshow {
+  border-bottom: 1px solid var(--card-border);
+  padding: 2rem 0;
+}
+
+.swiper-slide .projectSlide {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+.swiper-slide .projectSlide.loading {
+  width: 100%;
+  height: 450px;
+  background-color: var(--card-background-hover);
+}
+
+.projectSlideCaptionWrapper {
+  display: block;
+  width: 100%;
+}
+
+.projectSlideCaption {
+  color: var(--text-color-light);
+  padding: 1rem 0 0 0;
+}
+
+.projectSlideCaption__textArea {
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: var(--transition-time);
+}

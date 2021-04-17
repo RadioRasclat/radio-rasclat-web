@@ -17,6 +17,7 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
 import icons from '../../../assets/svg/svg-icons';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
 import { ProjectsSliderComponent } from './projects-slider/projects-slider.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { ProjectsSliderComponent } from './projects-slider/projects-slider.compo
     SvgIconsModule.forRoot({
       icons,
     }),
+    NgxSkeletonLoaderModule,
   ],
   declarations: [
     ProjectsComponent,
