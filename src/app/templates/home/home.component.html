@@ -12,7 +12,12 @@
   >
   </app-slideshow>
 
-  <app-text-seperator [text]="'latestBroadcasts' | translate" [isLink]="false">
+  <app-text-seperator
+    [text]="'(' + recordings.length + ') ' + ('broadcasts' | translate) + ' >'"
+    [isLink]="true"
+    [isLoading]="isLoading"
+    [url]="'/broadcasts'"
+  >
   </app-text-seperator>
 
   <app-recordings-gallery
@@ -23,12 +28,19 @@
   </app-recordings-gallery>
 
   <app-text-seperator
-    [text]="'(' + recordings.length + ') ' + ('viewAll' | translate) + ' >'"
+    [text]="'(' + projects.length + ') ' + ('events' | translate) + ' >'"
     [isLink]="true"
-    [url]="'/broadcasts'"
-    [hidden]="isLoading"
+    [isLoading]="isLoading"
+    [url]="'/events'"
   >
   </app-text-seperator>
+
+  <app-projects-slider
+    [projects]="projects"
+    [isLoading]="isLoading"
+    [limit]="8"
+  >
+  </app-projects-slider>
 </div>
 
 <div class="container">
@@ -63,14 +75,4 @@
   </div>
 </div>
 
-<div class="container">
-  <app-text-seperator [text]="'projects' | translate" [isLink]="false">
-  </app-text-seperator>
-
-  <app-projects-slider
-    [projects]="projects"
-    [isLoading]="isLoading"
-    [limit]="8"
-  >
-  </app-projects-slider>
-</div>
+<div class="container"></div>
