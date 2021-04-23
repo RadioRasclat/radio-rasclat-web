@@ -82,19 +82,25 @@ body {
 
 @media only screen and (min-width: 32rem) {
   body {
-    font-size: 110%;
+    font-size: 105%;
   }
 }
 
 @media only screen and (min-width: 48rem) {
   body {
-    font-size: 120%;
+    font-size: 110%;
   }
 }
 
 @media only screen and (min-width: 64rem) {
   body {
-    font-size: 130%;
+    font-size: 115%;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  body {
+    font-size: 120%;
   }
 }
 
