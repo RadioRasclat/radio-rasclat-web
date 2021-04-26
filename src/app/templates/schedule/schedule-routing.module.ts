@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'schedule',
       component: ScheduleComponent,
-      data: { title: 'Radio Rasclat • Schedule' },
+      data: { title: 'Radio Rasclat — Schedule' },
     },
   ]),
 ];

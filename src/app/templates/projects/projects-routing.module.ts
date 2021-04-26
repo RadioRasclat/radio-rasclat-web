@@ -10,7 +10,7 @@ const routes: Routes = [
     {
       path: 'events',
       component: ProjectsComponent,
-      data: { title: 'Radio Rasclat • Events' },
+      data: { title: 'Radio Rasclat — Events' },
     },
     {
       path: 'events/event/:id',

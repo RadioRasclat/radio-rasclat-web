@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'cookie-policy',
       component: CookiesComponent,
-      data: { title: 'Radio Rasclat • Cookie Policy' },
+      data: { title: 'Radio Rasclat — Cookie Policy' },
     },
   ]),
 ];

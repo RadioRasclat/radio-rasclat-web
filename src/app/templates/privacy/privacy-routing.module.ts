@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'privacy',
       component: PrivacyComponent,
-      data: { title: 'Radio Rasclat • Privacy' },
+      data: { title: 'Radio Rasclat — Privacy' },
     },
   ]),
 ];

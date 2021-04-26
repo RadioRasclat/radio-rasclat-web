@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'licenses',
       component: LicensesComponent,
-      data: { title: 'Radio Rasclat • Licenses' },
+      data: { title: 'Radio Rasclat — Licenses' },
     },
   ]),
 ];

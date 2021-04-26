@@ -42,7 +42,7 @@ export class RecordingsSingleComponent implements OnInit, AfterViewInit {
   }
 
   public setTitle({ title }: { title: any }) {
-    this.titleService.setTitle('Radio Rasclat • ' + title);
+    this.titleService.setTitle('Radio Rasclat — ' + title);
   }
 
   ngOnInit() {

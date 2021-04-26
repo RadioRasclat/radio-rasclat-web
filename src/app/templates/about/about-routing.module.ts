@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'about',
       component: AboutComponent,
-      data: { title: 'Radio Rasclat • About' },
+      data: { title: 'Radio Rasclat — About' },
     },
   ]),
 ];

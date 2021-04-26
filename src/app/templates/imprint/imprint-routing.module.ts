@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'imprint',
       component: ImprintComponent,
-      data: { title: 'Radio Rasclat • Imprint' },
+      data: { title: 'Radio Rasclat — Imprint' },
     },
   ]),
 ];
