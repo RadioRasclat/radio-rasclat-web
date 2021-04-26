@@ -9,7 +9,9 @@ const routes: Routes = [
     {
       path: '',
       component: HomeComponent,
-      data: { title: 'Radio Rasclat • Bass. Music. Live.' },
+      data: {
+        title: 'Radio Rasclat — Community and non-profit radio station, Kassel',
+      },
     },
   ]),
 ];
