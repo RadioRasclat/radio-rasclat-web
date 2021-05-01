@@ -13,9 +13,9 @@
       <div class="show__wrapper">
         <div class="show__info__container">
           <div class="show__title">
-            <h5>
-              <a routerLink="/shows/{{ show?.slug }}">{{ show?.title }} </a>
-            </h5>
+            <a routerLink="/shows/{{ show?.slug }}">
+              <h5>{{ show?.title }}</h5>
+            </a>
           </div>
           <div class="show__description">
             {{ show?.description | safeHtml }}
