@@ -224,15 +224,6 @@ li:last-child {
   margin-bottom: 0;
 }
 
-li a {
-  text-decoration: underline;
-  transition: var(--transition-time);
-}
-
-li a:hover {
-  text-decoration: underline;
-}
-
 /* Text Alignments */
 
 .text-left {
