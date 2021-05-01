@@ -45,7 +45,10 @@
           <div class="blog__list" *ngIf="!isLoading && blogPosts?.length == 0">
             {{ 'noBlogPostsFound' | translate }}
           </div>
-          <div class="blog__list__readMore">
+          <div
+            class="blog__list__readMore"
+            *ngIf="!isLoading && blogPosts?.length > 0"
+          >
             <a routerLink="/blog">{{ 'readMore' | translate }}</a>
           </div>
         </div>
