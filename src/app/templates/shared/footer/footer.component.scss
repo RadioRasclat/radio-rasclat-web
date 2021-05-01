@@ -2,10 +2,6 @@ footer {
   background: var(--card-background);
   border-top: 1px solid var(--card-border);
 
-  a:hover {
-    text-decoration: underline;
-  }
-
   .footer__wrapper {
     border-bottom: 1px solid var(--card-border);
     padding: 3rem 0;
@@ -21,6 +17,13 @@ footer {
 
     .blog__list__entry {
       margin-bottom: 1rem;
+
+      a {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
 
     .blog__list__readMore a {
