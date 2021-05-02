@@ -26,6 +26,7 @@
     "media-feature-parentheses-space-inside": "never",
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
-    "selector-type-no-unknown": false
+    "selector-type-no-unknown": false,
+    "selector-pseudo-element-no-unknown": null
   }
 }
