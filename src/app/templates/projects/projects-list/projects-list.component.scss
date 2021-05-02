@@ -1,61 +1,61 @@
 /* Blog Posts List App */
 
 .projectsList {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .projectsList .projectsEntry {
-  margin: 2rem 0;
-  position: relative;
-  transition: none;
-  background: var(--card-light-background);
-  border-radius: var(--card-border-radius);
+	margin: 2rem 0;
+	position: relative;
+	transition: none;
+	background: var(--card-light-background);
+	border-radius: var(--card-border-radius);
 }
 
 .projectsList .projectsEntry:first-child {
-  margin: 0 0 2rem;
+	margin: 0 0 2rem;
 }
 
 .projectsList .projectsEntry .projectsEntry__body {
-  padding: 2rem;
+	padding: 2rem;
 }
 
 .projectsList .projectsEntry .projectsEntry__meta {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .projectsList .projectsEntry .projectsEntry__meta .projectsEntry__date {
-  color: var(--text-color-light);
-  margin-bottom: 1rem;
+	color: var(--text-color-light);
+	margin-bottom: 1rem;
 }
 
 .projectsList .projectsEntry .projectsEntry__excerpt {
-  padding-bottom: 2rem;
+	padding-bottom: 2rem;
 }
 
 .projectsList .projectsEntry .projectsEntry__readMore {
-  text-align: center;
-  padding: 2rem 0 0;
-  border-top: 1px solid var(--card-light-background-hover);
+	text-align: center;
+	padding: 2rem 0 0;
+	border-top: 1px solid var(--card-light-background-hover);
 }
 
 .projectsList .projectsEntry__image__container figure.projectsListBanner {
-  border-top-left-radius: var(--card-border-radius);
-  border-top-right-radius: var(--card-border-radius);
-  position: relative;
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 60%;
+	border-top-left-radius: var(--card-border-radius);
+	border-top-right-radius: var(--card-border-radius);
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 60%;
 }
 
 .projectsList .projectsEntry__image__container figure.projectsListBanner img {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  height: calc(100% + 2px);
-  width: calc(100% + 2px);
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	height: calc(100% + 2px);
+	width: calc(100% + 2px);
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }

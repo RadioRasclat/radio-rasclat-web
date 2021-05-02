@@ -1,23 +1,24 @@
 .aboutPage .grid {
-  margin: 3rem 0;
+	margin: 3rem 0;
 }
 
 .partnersList {
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .partnersList .partner {
-  text-align: center;
+	text-align: center;
 }
 
 .partnersList .partner img {
-  max-width: 50%;
-  padding: 1rem;
-  height: 5rem;
+	max-width: 50%;
+	padding: 1rem;
+	height: 5rem;
 }
 
 ::ng-deep {
-  body.theme-light.theme-dark .partnersList .partner img {
-    filter: invert(1);
-  }
+
+	body.theme-light.theme-dark .partnersList .partner img {
+		filter: invert(1);
+	}
 }

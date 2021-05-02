@@ -1,195 +1,202 @@
 .recordingSingle {
-  border-bottom: 1px solid var(--card-border);
-  padding: 0 0 2rem;
-  margin-top: 1rem;
+	border-bottom: 1px solid var(--card-border);
+	padding: 0 0 2rem;
+	margin-top: 1rem;
 }
 
 .recording__info__container {
-  width: 100%;
-  padding-bottom: 1.5rem;
-  border-bottom: solid 1px var(--card-border);
-  margin-bottom: 1.5rem;
+	width: 100%;
+	padding-bottom: 1.5rem;
+	border-bottom: solid 1px var(--card-border);
+	margin-bottom: 1.5rem;
 
-  .recording__tags {
-    margin-bottom: 1rem;
-  }
+	.recording__tags {
+		margin-bottom: 1rem;
+	}
 
-  .recording__tags__single::after {
-    content: "•";
-  }
+	.recording__tags__single:after {
+		content: "•";
+	}
 
-  .recording__tags__single:last-child::after {
-    content: "";
-  }
+	.recording__tags__single:last-child:after {
+		content: "";
+	}
 
-  .recording__tags a {
-    text-decoration: underline;
-  }
+	.recording__tags a {
+		text-decoration: underline;
+	}
 
-  .recording__dates {
-    color: #a7a7a7;
-    font-weight: 800;
-  }
+	.recording__dates {
+		color: #a7a7a7;
+		font-weight: 800;
+	}
 
-  .recording__dates a {
-    color: inherit;
-  }
+	.recording__dates a {
+		color: inherit;
+	}
 
-  .recording__title {
-    margin-bottom: 0.5rem;
-  }
+	.recording__title {
+		margin-bottom: .5rem;
+	}
 
-  .recording__title h1 {
-    line-height: 30px;
-  }
+	.recording__title h1 {
+		line-height: 30px;
+	}
 }
 
 .recording__description__container {
-  width: 100%;
-  margin-bottom: 2rem;
+	width: 100%;
+	margin-bottom: 2rem;
 }
 
 ::ng-deep {
-  .recording__description__container p img {
-    max-width: 100%;
-  }
+
+	.recording__description__container p img {
+		max-width: 100%;
+	}
 }
 
 .recording__artists {
-  border: 1px solid var(--card-border);
-  border-radius: var(--card-border-radius);
-  padding: 2rem;
+	border: 1px solid var(--card-border);
+	border-radius: var(--card-border-radius);
+	padding: 2rem;
 
-  h4 {
-    margin-bottom: 1rem;
-  }
+	h4 {
+		margin-bottom: 1rem;
+	}
 
-  img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: -15px;
-    border: 3px solid var(--page-background);
-    object-fit: cover;
-  }
+	img {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		margin-right: -15px;
+		border: 3px solid var(--page-background);
+		object-fit: cover;
+	}
 }
 
 .recording__image__container {
-  padding: 0;
-  height: auto;
-  display: block;
-  position: relative;
+	padding: 0;
+	height: auto;
+	display: block;
+	position: relative;
 }
 
 .recording__controls {
-  padding: 0;
-  height: auto;
-  display: block;
-  position: relative;
-  margin: 2rem 0 0;
-  text-align: center;
+	padding: 0;
+	height: auto;
+	display: block;
+	position: relative;
+	margin: 2rem 0 0;
+	text-align: center;
 
-  .btn {
-    margin: 0 0.5rem 1rem 0;
-  }
+	.btn {
+		margin: 0 .5rem 1rem 0;
+	}
 
-  .btn:last-child {
-    margin-right: 0;
-  }
+	.btn:last-child {
+		margin-right: 0;
+	}
 }
 
 .recording__image__container figure.square {
-  position: relative;
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 100%;
-  border: 1px solid var(--card-border);
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 100%;
+	border: 1px solid var(--card-border);
 }
 
 .recording__image__container figure.square img {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  height: calc(100% + 2px);
-  width: calc(100% + 2px);
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	height: calc(100% + 2px);
+	width: calc(100% + 2px);
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }
 
 @media only screen and (min-width: 32rem) {
-  .recording__controls {
-    margin: 2rem 0 1rem;
-  }
 
-  .recording__info__container {
-    .recording__title h1 {
-      line-height: 35px;
-    }
-  }
+	.recording__controls {
+		margin: 2rem 0 1rem;
+	}
 
-  .recording__image__container {
-    padding: 0 5rem;
-  }
+	.recording__info__container {
+
+		.recording__title h1 {
+			line-height: 35px;
+		}
+	}
+
+	.recording__image__container {
+		padding: 0 5rem;
+	}
 }
 
 @media only screen and (min-width: 48rem) {
-  .recording__controls {
-    margin: 2rem 0 1.5rem;
-  }
 
-  .recording__info__container {
-    .recording__title h1 {
-      line-height: 40px;
-    }
-  }
+	.recording__controls {
+		margin: 2rem 0 1.5rem;
+	}
 
-  .recording__tags__single {
-    background: var(--secondary-color-light);
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-right: 0.4rem;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    padding: 0.4rem 0.7rem;
-    border-radius: var(--border-radius);
-  }
+	.recording__info__container {
 
-  .recording__tags__single:hover {
-    text-decoration: underline;
-  }
+		.recording__title h1 {
+			line-height: 40px;
+		}
+	}
 
-  .recording__tags .recording__tags__single a {
-    transition: var(--transition-time);
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
+	.recording__tags__single {
+		background: var(--secondary-color-light);
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: .9rem;
+		margin-right: .4rem;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		padding: .4rem .7rem;
+		border-radius: var(--border-radius);
+	}
 
-  .recording__tags .recording__tags__single::after {
-    content: "";
-  }
+	.recording__tags__single:hover {
+		text-decoration: underline;
+	}
 
-  .recording__image__container {
-    padding: 0;
-  }
+	.recording__tags .recording__tags__single a {
+		transition: var(--transition-time);
+		color: var(--secondary-color);
+		text-decoration: none;
+	}
+
+	.recording__tags .recording__tags__single:after {
+		content: "";
+	}
+
+	.recording__image__container {
+		padding: 0;
+	}
 }
 
 @media only screen and (min-width: 64rem) {
-  .recordingSingle {
-    border-bottom: 1px solid var(--card-border);
-    padding: 0 0 4rem 0;
-  }
 
-  .recording__controls {
-    margin: 2rem 0;
-  }
+	.recordingSingle {
+		border-bottom: 1px solid var(--card-border);
+		padding: 0 0 4rem 0;
+	}
 
-  .recording__info__container {
-    .recording__title h1 {
-      line-height: 45px;
-    }
-  }
+	.recording__controls {
+		margin: 2rem 0;
+	}
+
+	.recording__info__container {
+
+		.recording__title h1 {
+			line-height: 45px;
+		}
+	}
 }

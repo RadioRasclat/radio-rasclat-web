@@ -1,13 +1,16 @@
 .scheduleDayRow.active {
-  ::ng-deep {
-    app-page-title .pageTitle {
-      color: var(--secondary-color);
-    }
-  }
+
+	::ng-deep {
+
+		app-page-title .pageTitle {
+			color: var(--secondary-color);
+		}
+	}
 }
 
 @media only screen and (min-width: 64rem) {
-  .scheduleColumn {
-    border-left: 1px solid var(--card-border);
-  }
+
+	.scheduleColumn {
+		border-left: 1px solid var(--card-border);
+	}
 }

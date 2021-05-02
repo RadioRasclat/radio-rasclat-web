@@ -1,78 +1,78 @@
 /* Recordings List App */
 
 .recordingList {
-  border-bottom: 1px solid var(--card-border);
+	border-bottom: 1px solid var(--card-border);
 }
 
 .recording {
-  position: relative;
-  border-bottom: 1px solid var(--card-light-background-hover);
+	position: relative;
+	border-bottom: 1px solid var(--card-light-background-hover);
 }
 
 .recording:last-child {
-  position: relative;
-  border-bottom: none;
+	position: relative;
+	border-bottom: none;
 }
 
 .recording:hover > .recording__wrapper {
-  transition: var(--transition-time);
-  background-color: var(--card-background-hover);
+	transition: var(--transition-time);
+	background-color: var(--card-background-hover);
 }
 
 .recording__wrapper {
-  padding: 2rem;
-  position: relative;
-  background-color: var(--card-background);
-  display: flex;
-  align-items: center;
+	padding: 2rem;
+	position: relative;
+	background-color: var(--card-background);
+	display: flex;
+	align-items: center;
 }
 
 .recording__info__container {
-  width: 100%;
+	width: 100%;
 }
 
 .recording__tags {
-  margin-bottom: 0.7rem;
+	margin-bottom: .7rem;
 }
 
-.recording__tags__single::after {
-  content: "•";
+.recording__tags__single:after {
+	content: "•";
 }
 
-.recording__tags__single:last-child::after {
-  content: "";
+.recording__tags__single:last-child:after {
+	content: "";
 }
 
 .recording__tags a {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .recording__title {
-  margin-bottom: 0.3rem;
+	margin-bottom: .3rem;
 }
 
 .recording__image__container {
-  padding: 0;
-  margin-right: 1rem;
-  width: 90px;
+	padding: 0;
+	margin-right: 1rem;
+	width: 90px;
 }
 
 .recording__image__container figure.square {
-  position: relative;
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 100%;
-  border: 1px solid var(--card-border);
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 100%;
+	border: 1px solid var(--card-border);
 }
 
 .recording__image__container figure.square img {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  height: calc(100% + 2px);
-  width: calc(100% + 2px);
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	height: calc(100% + 2px);
+	width: calc(100% + 2px);
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }

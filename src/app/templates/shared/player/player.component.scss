@@ -1,172 +1,174 @@
 @import "~theme/_z-index.scss";
 
 #player {
-  background: var(--card-light-background);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: map-get($z-index, player);
+	background: var(--card-light-background);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: map-get($z-index, player);
 }
 
 .playerWrapper {
-  padding: 0.5rem 0;
+	padding: .5rem 0;
 }
 
 /* Range slider */
 
 input[type="range"] {
-  margin: auto;
-  -webkit-appearance: none;
-  position: relative;
-  overflow: hidden;
-  height: 4px;
-  cursor: pointer;
-  border-radius: 0;
+	margin: auto;
+	-webkit-appearance: none;
+	position: relative;
+	overflow: hidden;
+	height: 4px;
+	cursor: pointer;
+	border-radius: 0;
 }
 
 input[type="range"]:focus {
-  outline: none;
+	outline: none;
 }
 
 ::-webkit-slider-runnable-track {
-  background: var(--card-light-background-hover);
+	background: var(--card-light-background-hover);
 }
 
 ::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 0;
-  height: 4px;
-  box-shadow: -100vw 0 0 100vw var(--secondary-color);
-  border: 0;
+	-webkit-appearance: none;
+	width: 0;
+	height: 4px;
+	box-shadow: -100vw 0 0 100vw var(--secondary-color);
+	border: 0;
 }
 
 ::-moz-range-track {
-  height: 4px;
-  background: var(--card-light-background-hover);
+	height: 4px;
+	background: var(--card-light-background-hover);
 }
 
 ::-moz-range-thumb {
-  background: #fff;
-  height: 4px;
-  width: 0;
-  border: 0;
-  border-radius: 0 !important;
-  box-shadow: -100vw 0 0 100vw var(--secondary-color);
-  box-sizing: border-box;
+	background: #ffffff;
+	height: 4px;
+	width: 0;
+	border: 0;
+	border-radius: 0 !important;
+	box-shadow: -100vw 0 0 100vw var(--secondary-color);
+	box-sizing: border-box;
 }
 
 ::-ms-fill-lower {
-  background: var(--secondary-color);
-  height: 4px;
+	background: var(--secondary-color);
+	height: 4px;
 }
 
 ::-ms-thumb {
-  background: #fff;
-  border: 0;
-  height: 4px;
-  width: 0;
-  box-sizing: border-box;
+	background: #ffffff;
+	border: 0;
+	height: 4px;
+	width: 0;
+	box-sizing: border-box;
 }
 
 ::-ms-ticks-after {
-  display: none;
+	display: none;
 }
 
 ::-ms-ticks-before {
-  display: none;
+	display: none;
 }
 
 ::-ms-track {
-  background: var(--card-light-background-hover);
-  color: transparent;
-  height: 40px;
-  border: none;
+	background: var(--card-light-background-hover);
+	color: transparent;
+	height: 40px;
+	border: none;
 }
 
 ::-ms-tooltip {
-  display: none;
+	display: none;
 }
 
 .playerWrapper .rangeSlider {
-  display: flex;
-  margin-bottom: 0.5rem;
+	display: flex;
+	margin-bottom: .5rem;
 }
 
 .playerInner {
-  display: table;
+	display: table;
 }
 
 .playerInner > div {
-  display: table-cell;
-  vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .playerControls {
-  width: 35px;
-  height: 50px;
-  padding-right: 1rem;
+	width: 35px;
+	height: 50px;
+	padding-right: 1rem;
 }
 
 .playerControls:last-child {
-  padding-right: 0;
+	padding-right: 0;
 }
 
 .playerImage {
-  width: 50px;
-  height: 50px;
+	width: 50px;
+	height: 50px;
 }
 
 .playerImage img {
-  display: flex;
+	display: flex;
 }
 
 .playerInfo .nextShow {
-  font-size: 17px;
-  display: none;
+	font-size: 17px;
+	display: none;
 }
 
 .playerInfo .nextShow__time {
-  opacity: 0.4;
+	opacity: .4;
 }
 
 .playerDuration {
-  width: 0;
-  text-align: right;
+	width: 0;
+	text-align: right;
 }
 
 .playerDurationInner {
-  display: none;
+	display: none;
 }
 
 .playerClose {
-  width: 35px;
-  height: 50px;
-  padding-left: 1rem;
+	width: 35px;
+	height: 50px;
+	padding-left: 1rem;
 }
 
 svg-icon {
-  background: var(--card-light-background-hover);
-  padding: 0.5rem;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
+	background: var(--card-light-background-hover);
+	padding: .5rem;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
 }
 
 @media only screen and (min-width: 48rem) {
-  .playerInfo .nextShow {
-    font-size: 17px;
-    display: block;
-  }
+
+	.playerInfo .nextShow {
+		font-size: 17px;
+		display: block;
+	}
 }
 
 @media only screen and (min-width: 64rem) {
-  .playerDuration {
-    width: 220px;
-    text-align: right;
-  }
 
-  .playerDurationInner {
-    display: block;
-  }
+	.playerDuration {
+		width: 220px;
+		text-align: right;
+	}
+
+	.playerDurationInner {
+		display: block;
+	}
 }

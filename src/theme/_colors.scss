@@ -1,12 +1,12 @@
 $primary-color: #000000;
 $primary-color-dark: #ffffff;
-$primary-color-light: rgba($primary-color, 0.15);
-$primary-color-light-dark: rgba($primary-color-dark, 0.15);
+$primary-color-light: rgba($primary-color, .15);
+$primary-color-light-dark: rgba($primary-color-dark, .15);
 
 $secondary-color: #6157f7;
 $secondary-color-dark: #6157f7;
-$secondary-color-light: rgba($secondary-color, 0.15);
-$secondary-color-light-dark: rgba($secondary-color-dark, 0.15);
+$secondary-color-light: rgba($secondary-color, .15);
+$secondary-color-light-dark: rgba($secondary-color-dark, .15);
 
 $page-background: #fbfbfb;
 $page-background-dark: #151515;
@@ -17,7 +17,7 @@ $text-color-dark: #eaeaea;
 $text-color-light: #b3b3b3;
 $text-color-light-dark: #525252;
 
-$card-background: #fff;
+$card-background: #ffffff;
 $card-background-dark: #000000;
 $card-background-hover: #f2f2f2;
 $card-background-hover-dark: #191919;
@@ -30,52 +30,52 @@ $card-light-background-hover: #dedede;
 $card-light-background-hover-dark: #2d2d2d;
 
 $colors: (
-  --primary-color: (
-    $primary-color,
-    $primary-color-dark,
-  ),
-  --primary-color-light: (
-    $primary-color-light,
-    $primary-color-light-dark,
-  ),
-  --secondary-color: (
-    $secondary-color,
-    $secondary-color-dark,
-  ),
-  --secondary-color-light: (
-    $secondary-color-light,
-    $secondary-color-light-dark,
-  ),
-  --page-background: (
-    $page-background,
-    $page-background-dark,
-  ),
-  --text-color: (
-    $text-color,
-    $text-color-dark,
-  ),
-  --text-color-light: (
-    $text-color-light,
-    $text-color-light-dark,
-  ),
-  --card-background: (
-    $card-background,
-    $card-background-dark,
-  ),
-  --card-background-hover: (
-    $card-background-hover,
-    $card-background-hover-dark,
-  ),
-  --card-border: (
-    $card-border,
-    $card-border-dark,
-  ),
-  --card-light-background: (
-    $card-light-background,
-    $card-light-background-dark,
-  ),
-  --card-light-background-hover: (
-    $card-light-background-hover,
-    $card-light-background-hover-dark,
-  ),
+	--primary-color: (
+		$primary-color,
+		$primary-color-dark,
+	),
+	--primary-color-light: (
+		$primary-color-light,
+		$primary-color-light-dark,
+	),
+	--secondary-color: (
+		$secondary-color,
+		$secondary-color-dark,
+	),
+	--secondary-color-light: (
+		$secondary-color-light,
+		$secondary-color-light-dark,
+	),
+	--page-background: (
+		$page-background,
+		$page-background-dark,
+	),
+	--text-color: (
+		$text-color,
+		$text-color-dark,
+	),
+	--text-color-light: (
+		$text-color-light,
+		$text-color-light-dark,
+	),
+	--card-background: (
+		$card-background,
+		$card-background-dark,
+	),
+	--card-background-hover: (
+		$card-background-hover,
+		$card-background-hover-dark,
+	),
+	--card-border: (
+		$card-border,
+		$card-border-dark,
+	),
+	--card-light-background: (
+		$card-light-background,
+		$card-light-background-dark,
+	),
+	--card-light-background-hover: (
+		$card-light-background-hover,
+		$card-light-background-hover-dark,
+	),
 );

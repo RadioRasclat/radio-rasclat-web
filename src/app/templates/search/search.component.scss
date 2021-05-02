@@ -1,110 +1,117 @@
 .filterPanel h4 {
-  margin-bottom: 0.5rem;
+	margin-bottom: .5rem;
 }
 
 ::ng-deep {
-  input.ais-SearchBox-input {
-    outline: none;
-    border: none;
-    background: transparent;
-    text-align: center;
-    font-family: "Trash", sans-serif;
-    width: 100%;
-    color: var(--text-color);
-    padding: 1.5rem 0 1rem;
-    font-size: 2rem;
-    border-bottom: 1px solid var(--card-border);
-    margin-bottom: 2rem;
-  }
 
-  span.ais-RefinementList-labelText {
-    margin: 0 0.5rem;
-  }
+	input.ais-SearchBox-input {
+		outline: none;
+		border: none;
+		background: transparent;
+		text-align: center;
+		font-family: "Trash", sans-serif;
+		width: 100%;
+		color: var(--text-color);
+		padding: 1.5rem 0 1rem;
+		font-size: 2rem;
+		border-bottom: 1px solid var(--card-border);
+		margin-bottom: 2rem;
+	}
 
-  span.ais-RefinementList-count {
-    background: var(--secondary-color-light);
-    color: var(--secondary-color);
-    padding: 0 0.5rem;
-    border-radius: var(--card-border-radius);
-    font-size: 80%;
-  }
+	span.ais-RefinementList-labelText {
+		margin: 0 .5rem;
+	}
 
-  ul.ais-RefinementList-list {
-    padding: 0;
-    list-style: none;
-    margin-top: 1rem;
-  }
+	span.ais-RefinementList-count {
+		background: var(--secondary-color-light);
+		color: var(--secondary-color);
+		padding: 0 .5rem;
+		border-radius: var(--card-border-radius);
+		font-size: 80%;
+	}
 
-  li.ais-RefinementList-item {
-    margin-bottom: 0.5rem;
-  }
+	ul.ais-RefinementList-list {
+		padding: 0;
+		list-style: none;
+		margin-top: 1rem;
+	}
 
-  .ais-Panel {
-    margin-bottom: 3rem;
-    padding: 0.2rem 1rem;
-    background: var(--card-light-background);
-    border-radius: var(--card-border-radius);
-  }
+	li.ais-RefinementList-item {
+		margin-bottom: .5rem;
+	}
 
-  button.ais-SearchBox-reset {
-    display: none;
-  }
+	.ais-Panel {
+		margin-bottom: 3rem;
+		padding: .2rem 1rem;
+		background: var(--card-light-background);
+		border-radius: var(--card-border-radius);
+	}
 
-  button.ais-SearchBox-submit {
-    display: none;
-  }
+	button.ais-SearchBox-reset {
+		display: none;
+	}
 
-  ul.ais-Pagination-list {
-    display: block;
-    list-style: disc outside none;
-    margin: 1em 0;
-    padding: 0;
-    text-align: center;
-    font-family: "Trash", sans-serif;
-  }
+	button.ais-SearchBox-submit {
+		display: none;
+	}
 
-  ul.ais-Pagination-list li {
-    display: inline-block;
-  }
+	ul.ais-Pagination-list {
+		display: block;
+		list-style: disc outside none;
+		margin: 1em 0;
+		padding: 0;
+		text-align: center;
+		font-family: "Trash", sans-serif;
+	}
 
-  li.ais-Pagination-item {
-    margin: 0 0.5rem;
-  }
+	ul.ais-Pagination-list li {
+		display: inline-block;
+	}
 
-  li.ais-Pagination-item a {
-    text-decoration: none;
-  }
+	li.ais-Pagination-item {
+		margin: 0 .5rem;
+	}
 
-  li.ais-Pagination-item.ais-Pagination-item--disabled a {
-    color: var(--text-color-light);
-  }
+	li.ais-Pagination-item a {
+		text-decoration: none;
+	}
 
-  li.ais-Pagination-item.ais-Pagination-item--selected a {
-    color: var(--secondary-color);
-    text-decoration: underline;
-  }
+	li.ais-Pagination-item.ais-Pagination-item--disabled a {
+		color: var(--text-color-light);
+	}
+
+	li.ais-Pagination-item.ais-Pagination-item--selected a {
+		color: var(--secondary-color);
+		text-decoration: underline;
+	}
 }
 
 @media only screen and (min-width: 32rem) {
-  ::ng-deep {
-    input.ais-SearchBox-input {
-      font-size: 3rem;
-    }
-  }
+
+	::ng-deep {
+
+		input.ais-SearchBox-input {
+			font-size: 3rem;
+		}
+	}
 }
 
 @media only screen and (min-width: 32rem) {
-  ::ng-deep {
-    input.ais-SearchBox-input {
-      font-size: 4rem;
-    }
-  }
+
+	::ng-deep {
+
+		input.ais-SearchBox-input {
+			font-size: 4rem;
+		}
+	}
 }
 
 @media only screen and (min-width: 32rem) {
-  ::ng-deep {
-    input.ais-SearchBox-input {
-      font-size: 4.5rem;
-    }
-  }
+
+	::ng-deep {
+
+		input.ais-SearchBox-input {
+			font-size: 4.5rem;
+		}
+	}
 }

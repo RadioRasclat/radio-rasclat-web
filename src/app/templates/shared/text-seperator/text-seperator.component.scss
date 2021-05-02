@@ -1,28 +1,30 @@
 .textSeperator {
-  padding: 2rem 0 1.5rem;
-  text-align: center;
-  font-family: "Trash", sans-serif;
-  font-size: 2rem;
-  border-bottom: 1px solid var(--card-border);
+	padding: 2rem 0 1.5rem;
+	text-align: center;
+	font-family: "Trash", sans-serif;
+	font-size: 2rem;
+	border-bottom: 1px solid var(--card-border);
 }
 
 .textSeperator.active {
-  background: var(--card-background-hover);
-  transition: var(--transition-time);
+	background: var(--card-background-hover);
+	transition: var(--transition-time);
 }
 
 @media only screen and (min-width: 48rem) {
-  .textSeperator {
-    font-size: 2.5rem;
-  }
+
+	.textSeperator {
+		font-size: 2.5rem;
+	}
 }
 
 @media only screen and (min-width: 64rem) {
-  .textSeperator {
-    font-size: 3rem;
-  }
 
-  .textSeperator.border-left {
-    border-left: 1px solid var(--card-border);
-  }
+	.textSeperator {
+		font-size: 3rem;
+	}
+
+	.textSeperator.border-left {
+		border-left: 1px solid var(--card-border);
+	}
 }

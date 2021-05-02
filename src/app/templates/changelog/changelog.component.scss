@@ -1,121 +1,123 @@
 /* changelog > app select */
 
 .changelog .appSelect {
-  padding: 1rem 0 3rem;
+	padding: 1rem 0 3rem;
 }
 
 .changelog .app {
-  background-color: var(--card-light-background);
-  border-radius: var(--card-border-radius);
-  padding: 1rem;
-  transition: var(--transition-time);
+	background-color: var(--card-light-background);
+	border-radius: var(--card-border-radius);
+	padding: 1rem;
+	transition: var(--transition-time);
 }
 
 .changelog .app:hover {
-  background-color: var(--card-light-background-hover);
-  cursor: pointer;
+	background-color: var(--card-light-background-hover);
+	cursor: pointer;
 }
 
 .changelog .app.active {
-  background-color: var(--card-light-background-hover);
+	background-color: var(--card-light-background-hover);
 }
 
 .changelog .appImage {
-  padding: 0 2.5rem 1rem;
-  display: none;
+	padding: 0 2.5rem 1rem;
+	display: none;
 }
 
 .changelog .appImage img {
-  width: 100%;
+	width: 100%;
 }
 
 .changelog .appName {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .changelog .appName:hover {
-  text-decoration: underline;
-  color: var(--secondary-color);
+	text-decoration: underline;
+	color: var(--secondary-color);
 }
 
 /* Bugs notice */
 
 .changelog .bugsNotice {
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 /* changelog lists */
 
 .changelog .changelogItem {
-  margin: 2rem 0;
-  position: relative;
-  transition: none;
-  background: var(--card-light-background);
-  border-radius: var(--card-border-radius);
-  padding: 2rem;
+	margin: 2rem 0;
+	position: relative;
+	transition: none;
+	background: var(--card-light-background);
+	border-radius: var(--card-border-radius);
+	padding: 2rem;
 }
 
 .changelog .changelogItem:first-child {
-  margin: 0 0 2rem;
+	margin: 0 0 2rem;
 }
 
 .changelog .changelogItemHeader {
-  margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .changelog .changelogItem .logTime {
-  color: var(--text-color-light);
-  margin-bottom: 1rem;
+	color: var(--text-color-light);
+	margin-bottom: 1rem;
 }
 
 .changelog .changelogItem .changesSection {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .changelog .changelogItem .changesSection:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .changelog .changelogItem .articleMeta {
-  margin: 1rem 0 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
+	margin: 1rem 0 .5rem;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .changelog .changelogItem .category {
-  margin-right: 1rem;
-  position: relative;
-  border-radius: var(--card-border-radius);
-  padding: 3px 9px 1px;
-  font-size: 13px;
-  height: 20px;
-  line-height: 19px;
-  margin-bottom: 5px;
+	margin-right: 1rem;
+	position: relative;
+	border-radius: var(--card-border-radius);
+	padding: 3px 9px 1px;
+	font-size: 13px;
+	height: 20px;
+	line-height: 19px;
+	margin-bottom: 5px;
 }
 
 .changelog .category_new {
-  /* background-color: #b26cee; */
-  background-color: var(--secondary-color);
-  color: #fff;
+
+	/* background-color: #b26cee; */
+	background-color: var(--secondary-color);
+	color: #ffffff;
 }
 
 .changelog .category_changes {
-  background-color: #fcc83c;
-  color: #fff;
+	background-color: #fcc83c;
+	color: #ffffff;
 }
 
 .changelog .category_fixed {
-  background-color: #ee6c6c;
-  color: #fff;
+	background-color: #ee6c6c;
+	color: #ffffff;
 }
 
 .changelog .changelogItem .content {
-  min-height: 40px;
-  clear: both;
+	min-height: 40px;
+	clear: both;
 }
 
 @media only screen and (min-width: 48rem) {
-  .changelog .appImage {
-    display: block;
-  }
+
+	.changelog .appImage {
+		display: block;
+	}
 }

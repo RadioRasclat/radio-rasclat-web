@@ -1,46 +1,46 @@
 @import "~theme/_z-index.scss";
 
 .artistsList {
-  display: block;
-  position: relative;
-  z-index: map-get($z-index, backdrop-text);
+	display: block;
+	position: relative;
+	z-index: map-get($z-index, backdrop-text);
 }
 
 .artist {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--card-border);
+	padding: 1rem 0;
+	border-bottom: 1px solid var(--card-border);
 }
 
 .artist__wrapper {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .artist__wrapper__name {
-  display: flex;
+	display: flex;
 }
 
 .artist__wrapper__count {
-  display: flex;
+	display: flex;
 }
 
 .artistsBackgroundImg {
-  position: fixed;
-  display: block;
-  margin: auto;
-  z-index: map-get($z-index, backdrop-image);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	position: fixed;
+	display: block;
+	margin: auto;
+	z-index: map-get($z-index, backdrop-image);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .artistsBackgroundImg img {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 35%;
-  position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 35%;
+	position: absolute;
 }
