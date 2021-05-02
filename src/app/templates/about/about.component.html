@@ -85,7 +85,8 @@
         <p>
           We would like to thank all our amazing artists and guests such as
           <span [hidden]="isLoading" *ngFor="let artist of artists">
-            {{ artist?.title }},
+            <a routerLink="/artists/{{ artist?.slug }}">{{ artist?.title }}</a
+            >,
           </span>
           who have been part of the program!
         </p>
@@ -95,25 +96,60 @@
     <div class="partnersList">
       <div class="grid-auto-md grid-auto-xl@md grid-gap-md">
         <div class="partner">
-          <img src="assets/partners/kassel.svg" alt="Kassel Kulturamt" />
+          <a
+            href="https://www.kassel.de/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/kassel.svg" alt="Kassel Kulturamt" />
+          </a>
         </div>
         <div class="partner">
-          <img src="assets/partners/uni-kassel.svg" alt="Universität Kassel" />
+          <a
+            href="https://www.uni-kassel.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/partners/uni-kassel.svg"
+              alt="Universität Kassel"
+            />
+          </a>
         </div>
         <div class="partner">
-          <img
-            src="assets/partners/kunsthochschule-kassel.svg"
-            alt="Kunsthochschule Kassel"
-          />
+          <a
+            href="https://www.kunsthochschulekassel.de/willkommen.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/partners/kunsthochschule-kassel.svg"
+              alt="Kunsthochschule Kassel"
+            />
+          </a>
         </div>
         <div class="partner">
-          <img src="assets/partners/r-ein.svg" alt="R:EIN" />
+          <a href="https://r-ein.de/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/partners/r-ein.svg" alt="R:EIN" />
+          </a>
         </div>
         <div class="partner">
-          <img src="assets/partners/feiertag.svg" alt="Galerie Feiertag" />
+          <a
+            href="https://www.instagram.com/feiertag_/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/feiertag.svg" alt="Galerie Feiertag" />
+          </a>
         </div>
         <div class="partner">
-          <img src="assets/partners/kmmn.svg" alt="Galerie Feiertag" />
+          <a
+            href="https://www.facebook.com/KMMNSPACE/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/kmmn.svg" alt="KMMN" />
+          </a>
         </div>
       </div>
     </div>
