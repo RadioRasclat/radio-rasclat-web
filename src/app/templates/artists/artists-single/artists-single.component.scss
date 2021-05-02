@@ -53,7 +53,9 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   .artist__info__container {
+
     .artist__title h1 {
       line-height: 35px;
     }
@@ -65,11 +67,13 @@
 }
 
 @media only screen and (min-width: 48rem) {
+
   .artistSingle {
     padding: 0 0 2rem;
   }
 
   .artist__info__container {
+
     .artist__title h1 {
       line-height: 40px;
     }
@@ -81,12 +85,14 @@
 }
 
 @media only screen and (min-width: 64rem) {
+
   .artistSingle {
     border-bottom: 1px solid var(--card-border);
     padding: 0 0 4rem;
   }
 
   .artist__info__container {
+
     .artist__title h1 {
       line-height: 45px;
     }

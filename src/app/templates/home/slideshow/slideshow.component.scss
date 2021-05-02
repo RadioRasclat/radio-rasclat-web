@@ -65,13 +65,14 @@
   width: 100%;
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, .6) 0%,
     rgba(0, 0, 0, 0) 100%
   );
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
+
 .slideshowSlideCaption {
-  color: #fff;
+  color: #ffffff;
   padding: 1rem 2rem;
 }
 
@@ -80,7 +81,7 @@
 }
 
 .slideshowSlideCaption__textArea h4 {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -97,7 +98,7 @@
   top: 0;
   right: 0;
   display: block;
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   font-size: 13px;
   margin: 1.5rem 2rem 0 0;
@@ -121,10 +122,10 @@
   border-radius: 50%;
   background: #ff0000;
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 0 rgba(255, 0, 0, .4);
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
-  margin-right: 0.3rem;
+  margin-right: .3rem;
   top: -1px;
   position: relative;
 }
@@ -134,25 +135,32 @@
 }
 
 @-webkit-keyframes pulse {
+
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, .4);
   }
+
   70% {
     -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
   }
+
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
+
 @keyframes pulse {
+
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
-    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, .4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, .4);
   }
+
   70% {
     -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
     box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
   }
+
   100% {
     -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
     box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
@@ -160,6 +168,7 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   .pulse {
     width: 10px;
     height: 10px;
@@ -167,6 +176,7 @@
 }
 
 @media only screen and (min-width: 48rem) {
+
   .swiper-slide {
     width: 75% !important;
   }
@@ -175,7 +185,7 @@
     float: left;
     padding: 1rem;
     display: block;
-    margin-right: 0.5rem;
+    margin-right: .5rem;
   }
 
   .slideshowSlideCaption__playArea svg-icon {
@@ -189,6 +199,7 @@
 }
 
 @media only screen and (min-width: 64rem) {
+
   .swiper-slide {
     width: 40% !important;
   }

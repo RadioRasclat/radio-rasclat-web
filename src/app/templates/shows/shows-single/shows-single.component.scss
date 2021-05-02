@@ -48,7 +48,9 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   .show__info__container {
+
     .show__title h1 {
       line-height: 35px;
     }
@@ -60,11 +62,13 @@
 }
 
 @media only screen and (min-width: 48rem) {
+
   .showSingle {
     padding: 0 0 2rem;
   }
 
   .show__info__container {
+
     .show__title h1 {
       line-height: 40px;
     }
@@ -76,12 +80,14 @@
 }
 
 @media only screen and (min-width: 64rem) {
+
   .showSingle {
     border-bottom: 1px solid var(--card-border);
     padding: 0 0 4rem 0;
   }
 
   .show__info__container {
+
     .show__title h1 {
       line-height: 45px;
     }
