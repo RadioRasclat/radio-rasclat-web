@@ -10,8 +10,8 @@
     "selector-attribute-operator-space-before": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-brackets-space-inside": "never",
-    "declaration-block-trailing-semicolon": "always",
-    "declaration-no-important": true,
+    "declaration-block-trailing-semicolon": null,
+    "declaration-no-important": null,
     "declaration-colon-space-before": "never",
     "declaration-colon-space-after": "always",
     "number-leading-zero": "never",
@@ -26,10 +26,11 @@
     "media-feature-parentheses-space-inside": "never",
     "media-feature-colon-space-before": "never",
     "media-feature-colon-space-after": "always",
-    "selector-type-no-unknown": false,
+    "selector-type-no-unknown": null,
     "selector-pseudo-element-no-unknown": null,
     "no-descending-specificity": null,
     "at-rule-no-unknown": null,
-    "no-empty-source": null
+    "no-empty-source": null,
+    "declaration-colon-newline-after": null
   }
 }
