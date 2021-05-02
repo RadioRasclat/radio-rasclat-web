@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '@env/environment';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
+import { Artist } from '@app/core/models/Artist';
 
 @Component({
   selector: 'app-about',
@@ -10,7 +11,7 @@ import { ApiService } from '@app/core/services/api.service';
 })
 export class AboutComponent implements OnInit {
   version: string = environment.version;
-  artists = '';
+  artists: [Artist];
   isLoading = false;
 
   constructor(private apiService: ApiService) {}

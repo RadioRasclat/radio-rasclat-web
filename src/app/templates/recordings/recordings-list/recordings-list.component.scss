@@ -32,14 +32,14 @@
 }
 
 .recording__tags {
-  margin-bottom: 0.7rem;
+  margin-bottom: .7rem;
 }
 
-.recording__tags__single::after {
+.recording__tags__single:after {
   content: "•";
 }
 
-.recording__tags__single:last-child::after {
+.recording__tags__single:last-child:after {
   content: "";
 }
 
@@ -48,7 +48,7 @@
 }
 
 .recording__title {
-  margin-bottom: 0.3rem;
+  margin-bottom: .3rem;
 }
 
 .recording__image__container {

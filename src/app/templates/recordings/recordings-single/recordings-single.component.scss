@@ -14,11 +14,11 @@
     margin-bottom: 1rem;
   }
 
-  .recording__tags__single::after {
+  .recording__tags__single:after {
     content: "•";
   }
 
-  .recording__tags__single:last-child::after {
+  .recording__tags__single:last-child:after {
     content: "";
   }
 
@@ -36,7 +36,7 @@
   }
 
   .recording__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
 
   .recording__title h1 {
@@ -50,6 +50,7 @@
 }
 
 ::ng-deep {
+
   .recording__description__container p img {
     max-width: 100%;
   }
@@ -90,7 +91,7 @@
   text-align: center;
 
   .btn {
-    margin: 0 0.5rem 1rem 0;
+    margin: 0 .5rem 1rem 0;
   }
 
   .btn:last-child {
@@ -119,11 +120,13 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   .recording__controls {
     margin: 2rem 0 1rem;
   }
 
   .recording__info__container {
+
     .recording__title h1 {
       line-height: 35px;
     }
@@ -135,11 +138,13 @@
 }
 
 @media only screen and (min-width: 48rem) {
+
   .recording__controls {
     margin: 2rem 0 1.5rem;
   }
 
   .recording__info__container {
+
     .recording__title h1 {
       line-height: 40px;
     }
@@ -149,12 +154,12 @@
     background: var(--secondary-color-light);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9rem;
-    margin-right: 0.4rem;
+    font-size: .9rem;
+    margin-right: .4rem;
     display: inline-block;
     position: relative;
     text-align: center;
-    padding: 0.4rem 0.7rem;
+    padding: .4rem .7rem;
     border-radius: var(--border-radius);
   }
 
@@ -168,7 +173,7 @@
     text-decoration: none;
   }
 
-  .recording__tags .recording__tags__single::after {
+  .recording__tags .recording__tags__single:after {
     content: "";
   }
 
@@ -178,6 +183,7 @@
 }
 
 @media only screen and (min-width: 64rem) {
+
   .recordingSingle {
     border-bottom: 1px solid var(--card-border);
     padding: 0 0 4rem 0;
@@ -188,6 +194,7 @@
   }
 
   .recording__info__container {
+
     .recording__title h1 {
       line-height: 45px;
     }

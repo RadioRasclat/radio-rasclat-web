@@ -9,7 +9,7 @@
 }
 
 .playerWrapper {
-  padding: 0.5rem 0;
+  padding: .5rem 0;
 }
 
 /* Range slider */
@@ -46,7 +46,7 @@ input[type="range"]:focus {
 }
 
 ::-moz-range-thumb {
-  background: #fff;
+  background: #ffffff;
   height: 4px;
   width: 0;
   border: 0;
@@ -61,7 +61,7 @@ input[type="range"]:focus {
 }
 
 ::-ms-thumb {
-  background: #fff;
+  background: #ffffff;
   border: 0;
   height: 4px;
   width: 0;
@@ -89,7 +89,7 @@ input[type="range"]:focus {
 
 .playerWrapper .rangeSlider {
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .playerInner {
@@ -126,7 +126,7 @@ input[type="range"]:focus {
 }
 
 .playerInfo .nextShow__time {
-  opacity: 0.4;
+  opacity: .4;
 }
 
 .playerDuration {
@@ -146,7 +146,7 @@ input[type="range"]:focus {
 
 svg-icon {
   background: var(--card-light-background-hover);
-  padding: 0.5rem;
+  padding: .5rem;
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -154,6 +154,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 48rem) {
+
   .playerInfo .nextShow {
     font-size: 17px;
     display: block;
@@ -161,6 +162,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 64rem) {
+
   .playerDuration {
     width: 220px;
     text-align: right;

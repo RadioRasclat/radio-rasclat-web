@@ -77,7 +77,7 @@
 }
 
 .changelog .changelogItem .articleMeta {
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 .5rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -94,19 +94,20 @@
 }
 
 .changelog .category_new {
+
   /* background-color: #b26cee; */
   background-color: var(--secondary-color);
-  color: #fff;
+  color: #ffffff;
 }
 
 .changelog .category_changes {
   background-color: #fcc83c;
-  color: #fff;
+  color: #ffffff;
 }
 
 .changelog .category_fixed {
   background-color: #ee6c6c;
-  color: #fff;
+  color: #ffffff;
 }
 
 .changelog .changelogItem .content {
@@ -115,6 +116,7 @@
 }
 
 @media only screen and (min-width: 48rem) {
+
   .changelog .appImage {
     display: block;
   }
