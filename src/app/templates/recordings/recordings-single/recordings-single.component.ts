@@ -1,13 +1,15 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
-import { ApiService } from '../../../core/services/api.service';
+import { ApiService } from '@app/core/services/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import Vibrant from 'node-vibrant';
-import { AudioService } from '../../../core/services/audio.service';
-import { StreamState } from '../../../core/interfaces/stream-state';
+import { AudioService } from '@app/core/services/audio.service';
+import { StreamState } from '@app/core/interfaces/stream-state';
 import { Palette } from 'node-vibrant/lib/color';
 import mediumZoom from 'medium-zoom';
+import { ToastrService } from 'ngx-toastr';
+import { Recording } from '@app/core/models/Recording';
 
 @Component({
   selector: 'app-recordings-single',
@@ -15,8 +17,8 @@ import mediumZoom from 'medium-zoom';
   styleUrls: ['./recordings-single.component.scss'],
 })
 export class RecordingsSingleComponent implements OnInit, AfterViewInit {
-  recording: any;
-  showRecordings: any;
+  recording: Recording;
+  showRecordings: Recording[];
   title: any;
   hex: any;
   rgba: any;
@@ -33,7 +35,8 @@ export class RecordingsSingleComponent implements OnInit, AfterViewInit {
     private apiService: ApiService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private toastService: ToastrService
   ) {
     // listen to stream state
     this.audioService.getState().subscribe((state) => {
@@ -49,46 +52,54 @@ export class RecordingsSingleComponent implements OnInit, AfterViewInit {
     this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
-      this.apiService
-        .getRecording({ recordingId: this.id })
-        .pipe(
-          finalize(() => {
-            this.isLoading = false;
-          })
-        )
-        .subscribe((recording) => {
-          this.recording = recording;
-          this.setTitle({ title: this.recording.title });
-          Vibrant.from(
-            'https://cors-proxy.radio-rasclat.com/' + this.recording.image
+      if (this.id) {
+        this.apiService
+          .getRecording({ recordingId: this.id })
+          .pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
           )
-            .getPalette()
-            .then((palette) => {
-              this.hex = palette.Vibrant.hex;
-              this.rgba =
-                'rgba(' +
-                palette.Vibrant.r +
-                ',' +
-                palette.Vibrant.g +
-                ',' +
-                palette.Vibrant.b +
-                ',0.15)';
-            });
-          this.apiService
-            .getShow({ showId: this.recording?.show._id })
-            .pipe(
-              finalize(() => {
-                this.isLoading = false;
-              })
-            )
-            .subscribe((show) => {
-              if (typeof show.recordings[0]['title'] !== 'undefined') {
-                this.showRecordings = show.recordings;
-              } else {
-                this.showRecordings = [];
-              }
-            });
-        });
+          .subscribe((recording) => {
+            if (recording && recording.status !== 404) {
+              this.recording = recording;
+              this.setTitle({ title: this.recording.title });
+              Vibrant.from(
+                'https://cors-proxy.radio-rasclat.com/' + this.recording.image
+              )
+                .getPalette()
+                .then((palette) => {
+                  this.hex = palette.Vibrant.hex;
+                  this.rgba =
+                    'rgba(' +
+                    palette.Vibrant.r +
+                    ',' +
+                    palette.Vibrant.g +
+                    ',' +
+                    palette.Vibrant.b +
+                    ',0.15)';
+                });
+              this.apiService
+                .getShow({ showId: this.recording?.show._id })
+                .pipe(
+                  finalize(() => {
+                    this.isLoading = false;
+                  })
+                )
+                .subscribe((show) => {
+                  if (typeof show.recordings[0]['title'] !== 'undefined') {
+                    this.showRecordings = show.recordings;
+                  } else {
+                    this.showRecordings = [];
+                  }
+                });
+            } else {
+              this.toastService.info(recording.message, recording.status, {
+                closeButton: true,
+              });
+            }
+          });
+      }
     });
   }
 
