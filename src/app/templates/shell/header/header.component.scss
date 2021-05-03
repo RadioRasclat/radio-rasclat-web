@@ -40,6 +40,7 @@ header .logo img {
 }
 
 @media only screen and (min-width: 32rem) {
+
   header svg-icon.svg-icon-menu,
   svg-icon.svg-icon-menuClose {
     width: 18px;
@@ -48,9 +49,10 @@ header .logo img {
 }
 
 @media only screen and (min-width: 48rem) {
+
   header .logo img {
     width: 40px;
-    transition: all 0.15s;
+    transition: all .15s;
   }
 
   header .logo img:hover {
@@ -65,6 +67,7 @@ header .logo img {
 }
 
 @media only screen and (min-width: 64rem) {
+
   header svg-icon.svg-icon-menu,
   svg-icon.svg-icon-menuClose {
     width: 21px;
@@ -73,6 +76,7 @@ header .logo img {
 }
 
 @media only screen and (min-width: 80rem) {
+
   header svg-icon.svg-icon-menu,
   svg-icon.svg-icon-menuClose {
     width: 22px;
@@ -139,7 +143,7 @@ nav.navVisible {
 }
 
 .navigation h5 {
-  margin-bottom: 0.7rem;
+  margin-bottom: .7rem;
   display: block;
 }
 
@@ -155,12 +159,14 @@ nav.navVisible {
 }
 
 @media only screen and (min-width: 32rem) {
+
   .navigation svg-icon {
     width: 13px;
   }
 }
 
 @media only screen and (min-width: 48rem) {
+
   .navigation svg-icon {
     width: 14px;
   }
@@ -173,6 +179,7 @@ nav.navVisible {
 }
 
 @media only screen and (min-width: 64rem) {
+
   .navigation {
     line-height: 28px;
   }
@@ -183,6 +190,7 @@ nav.navVisible {
 }
 
 @media only screen and (min-width: 80rem) {
+
   .navigation {
     line-height: 29px;
   }
@@ -197,12 +205,12 @@ nav.navVisible {
 .languagePicker {
   position: absolute;
   background: var(--card-background);
-  padding: 0.3rem 1rem;
+  padding: .3rem 1rem;
   border: 1px solid var(--card-border);
   border-radius: var(--card-border-radius);
   margin-top: 10px;
   display: flex;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
 
 .languagePicker__item.currentLanguage {

@@ -28,7 +28,7 @@ modal {
   bottom: 0;
   left: 0;
   background-color: #000000;
-  opacity: 0.75;
+  opacity: .75;
   z-index: map-get($z-index, modal-overlay);
 }
 
@@ -40,24 +40,28 @@ modal {
 }
 
 @media only screen and (min-width: 32rem) {
+
   .modal-body {
     margin: 1rem;
   }
 }
 
 @media only screen and (min-width: 48rem) {
+
   .modal-body {
     margin: 3rem;
   }
 }
 
 @media only screen and (min-width: 64rem) {
+
   .modal-body {
     margin: 5rem;
   }
 }
 
 @media only screen and (min-width: 80rem) {
+
   .modal-body {
     margin: 5rem 15rem;
   }

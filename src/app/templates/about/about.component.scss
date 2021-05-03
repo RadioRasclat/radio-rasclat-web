@@ -16,12 +16,13 @@
     }
 
     img:hover {
-      opacity: 0.6;
+      opacity: .6;
     }
   }
 }
 
 ::ng-deep {
+
   body.theme-light.theme-dark .partnersList .partner img {
     filter: invert(1);
   }
