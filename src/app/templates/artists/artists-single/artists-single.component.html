@@ -4,7 +4,7 @@
     [isLink]="true"
     [url]="'/artists'"
   ></app-page-title>
-  <div class="artistSingle">
+  <div class="artistSingle" *ngIf="artist">
     <div class="grid grid-gap-md">
       <div class="col-4@sm">
         <div class="artist__image__container">
@@ -32,9 +32,7 @@
             </span>
           </div>
         </div>
-        <div class="artist__description__container">
-          <p [innerHTML]="artist?.description"></p>
-        </div>
+        <div class="artist__description__container"></div>
       </div>
     </div>
   </div>
