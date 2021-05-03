@@ -24,7 +24,7 @@
     "url": "https://opencollective.com/radio-rasclat"
   },
   "dependencies": {
-    "@angular/animations": "^10.2.4",
+    "@angular/animations": "^10.2.5",
     "@angular/common": "^10.2.4",
     "@angular/compiler": "^10.2.4",
     "@angular/core": "^10.2.4",
@@ -58,6 +58,7 @@
     "ngx-moment": "^5.0.0",
     "ngx-swiper-wrapper": "^9.0.1",
     "ngx-timeago": "^1.0.4",
+    "ngx-toastr": "^13.2.1",
     "node-vibrant": "^3.1.6",
     "opencollective-postinstall": "^2.0.3",
     "popper.js": "^1.16.1",

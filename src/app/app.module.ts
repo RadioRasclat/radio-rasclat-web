@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from '@app/core';
 import { TimeagoModule } from 'ngx-timeago';
 import { SharedModule } from '@app/templates/shared';
+import { ToastrModule } from 'ngx-toastr';
 
 /* VIEWS */
 import { AboutModule } from '@app/templates/about/about.module';
@@ -116,6 +117,8 @@ export class SentryErrorHandler implements ErrorHandler {
     NgAisModule.forRoot(),
     TimeagoModule.forRoot(),
     LazyLoadImageModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
