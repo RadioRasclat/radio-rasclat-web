@@ -24,6 +24,8 @@ import { LanguageSelectComponent } from './language-select/language-select.compo
 import { ScriptHackComponent } from './script-hack/script-hack.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { FooterComponent } from './footer/footer.component';
+import { ModalModule } from '@app/templates/shared/modal';
+import { DonationBoxComponent } from './donation-box/donation-box.component';
 
 @NgModule({
   imports: [
@@ -35,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     LazyLoadImageModule,
     TranslateModule,
     NgxSkeletonLoaderModule,
+    ModalModule,
   ],
   declarations: [
     LoaderComponent,
@@ -53,6 +56,7 @@ import { FooterComponent } from './footer/footer.component';
     LanguageSelectComponent,
     ScriptHackComponent,
     FooterComponent,
+    DonationBoxComponent,
   ],
   exports: [
     LoaderComponent,

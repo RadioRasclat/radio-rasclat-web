@@ -1,4 +1,4 @@
-@import "~theme/_z-index.scss";
+﻿@import "~theme/_z-index.scss";
 
 body.modal-open,
 html.modal-open {
@@ -36,13 +36,14 @@ modal {
   padding: 2.5rem 2rem;
   background: var(--page-background);
   margin: 0;
-  border-radius: var(--border-radius);
+  border-radius: 0;
 }
 
 @media only screen and (min-width: 32rem) {
 
   .modal-body {
     margin: 1rem;
+    border-radius: var(--border-radius);
   }
 }
 
