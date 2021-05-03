@@ -57,11 +57,13 @@ export class ModalComponent implements OnInit, OnDestroy {
   open(): void {
     this.element.style.display = 'block';
     document.body.classList.add('modal-open');
+    document.getElementsByTagName('html')[0].classList.add('modal-open');
   }
 
   // close modal
   close(): void {
     this.element.style.display = 'none';
     document.body.classList.remove('modal-open');
+    document.getElementsByTagName('html')[0].classList.remove('modal-open');
   }
 }

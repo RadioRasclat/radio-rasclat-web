@@ -5,6 +5,7 @@
 }
 
 .projectsList .projectsEntry {
+  margin: 2rem 0;
   position: relative;
   transition: none;
   background: var(--card-light-background);
@@ -21,10 +22,6 @@
 
 .projectsList .projectsEntry .projectsEntry__meta {
   margin-bottom: 1rem;
-}
-
-.projectsList .projectsEntry .projectsEntry__meta .projectsEntry__title h3 {
-  line-height: 35px;
 }
 
 .projectsList .projectsEntry .projectsEntry__meta .projectsEntry__date {

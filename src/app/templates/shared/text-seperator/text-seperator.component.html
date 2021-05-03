@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="grid" *ngIf="!isLoading">
   <div class="col-12">
     <div
       class="textSeperator"
@@ -17,6 +17,20 @@
       <a routerLink="{{ url }}">
         {{ text }}
       </a>
+    </div>
+  </div>
+</div>
+<div class="grid" *ngIf="isLoading">
+  <div class="col-12">
+    <div class="textSeperator">
+      <ngx-skeleton-loader
+        count="1"
+        [theme]="{
+          height: '2.3rem',
+          width: '20rem',
+          margin: '0'
+        }"
+      ></ngx-skeleton-loader>
     </div>
   </div>
 </div>

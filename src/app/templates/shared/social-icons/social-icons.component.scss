@@ -1,5 +1,5 @@
 .social-icon {
-  margin-right: 0.3rem;
+  margin-right: .3rem;
 }
 
 .social-icon:last-child {
@@ -11,14 +11,16 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   .social-icon svg-icon {
     width: 16px;
   }
 }
 
 @media only screen and (min-width: 48rem) {
+
   .social-icon {
-    margin-right: 0.4rem;
+    margin-right: .4rem;
   }
 
   .social-icon svg-icon {
@@ -27,8 +29,9 @@
 }
 
 @media only screen and (min-width: 64rem) {
+
   .social-icon {
-    margin-right: 0.45rem;
+    margin-right: .45rem;
   }
 
   .social-icon svg-icon {
@@ -37,8 +40,9 @@
 }
 
 @media only screen and (min-width: 80rem) {
+
   .social-icon {
-    margin-right: 0.5rem;
+    margin-right: .5rem;
   }
 
   .social-icon svg-icon {

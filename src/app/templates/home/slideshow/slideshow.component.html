@@ -40,7 +40,7 @@
                     >
                       <span class="pulse"></span> {{ 'live' | translate }} on
                       Radio Rasclat &mdash; {{ live?.timeEnd | timeago }} left
-                      <h4>↳{{ live?.title }}</h4>
+                      <h4>{{ live?.title }}</h4>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@
                   <div class="slideshowSlideCaption">
                     <div class="slideshowSlideCaption__textArea">
                       Stream the KW36 live.<br />
-                      <h4>↳Radio Rasclat now live on Twitch!</h4>
+                      <h4>Radio Rasclat now live on Twitch!</h4>
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="slideshowSlideCaption__textArea">
                       {{ 'nextUp' | translate }} on Radio Rasclat &mdash;
                       {{ nextUp?.timeStart }}<br />
-                      <h4>↳{{ nextUp?.title }}</h4>
+                      <h4>{{ nextUp?.title }}</h4>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'hotThisMonth' | translate }} &mdash;
                         {{ hotRecording?.viewCounter }} plays:<br />
-                        <h4>↳{{ hotRecording?.title }}</h4>
+                        <h4>{{ hotRecording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@
           </div>
           <div
             class="swiper-slide"
-            *ngFor="let recording of recordings | slice: 0:2; let i = index"
+            *ngFor="let recording of recordings | slice: 0:1; let i = index"
           >
             <div
               class="slideshowSlide"
@@ -130,9 +130,34 @@
                   <div class="slideshowSlideCaptionWrapper">
                     <div class="slideshowSlideCaption">
                       <div class="slideshowSlideCaption__textArea">
-                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | timeago }}:<br />
+                        <h4>{{ recording?.title }}</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="swiper-slide"
+            *ngFor="let recording of recordings | slice: 1:2; let i = index"
+          >
+            <div
+              class="slideshowSlide"
+              [defaultImage]="defaultImage"
+              [lazyLoad]="recording?.image"
+            >
+              <a routerLink="/broadcasts/{{ recording?.slug }}">
+                <div class="slideshowSlideInner">
+                  <div class="slideshowSlideCaptionWrapper">
+                    <div class="slideshowSlideCaption">
+                      <div class="slideshowSlideCaption__textArea">
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }} •
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
-                        <h4>↳{{ recording?.title }}</h4>
+                        <h4>{{ recording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -156,7 +181,7 @@
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'fromOurBlog' | translate }} &mdash;
                         {{ blogPost?.createdAt | date: 'dd.MM.yyyy' }}<br />
-                        <h4>↳{{ blogPost?.title }}</h4>
+                        <h4>{{ blogPost?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -173,14 +198,14 @@
               [defaultImage]="defaultImage"
               [lazyLoad]="project?.image"
             >
-              <a routerLink="/projects/project/{{ project?.slug }}">
+              <a routerLink="/events/event/{{ project?.slug }}">
                 <div class="slideshowSlideInner">
                   <div class="slideshowSlideCaptionWrapper">
                     <div class="slideshowSlideCaption">
                       <div class="slideshowSlideCaption__textArea">
                         {{ 'events' | translate }} &mdash;
                         {{ project?.timeStart | timeago }}<br />
-                        <h4>↳{{ project?.title }}</h4>
+                        <h4>{{ project?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -190,7 +215,7 @@
           </div>
           <div
             class="swiper-slide"
-            *ngFor="let recording of recordings | slice: 2:4; let i = index"
+            *ngFor="let recording of recordings | slice: 2:5; let i = index"
           >
             <div
               class="slideshowSlide"
@@ -202,9 +227,10 @@
                   <div class="slideshowSlideCaptionWrapper">
                     <div class="slideshowSlideCaption">
                       <div class="slideshowSlideCaption__textArea">
-                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }},
+                        {{ recording?.show.title }} —
+                        {{ recording?.timeStart | date: 'dd.MM.yyyy' }} •
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
-                        <h4>↳{{ recording?.title }}</h4>
+                        <h4>{{ recording?.title }}</h4>
                       </div>
                     </div>
                   </div>
@@ -225,42 +251,45 @@
           <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" *ngIf="hotRecording">
+          <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>
-          <div class="swiper-slide" *ngIf="hotRecording">
+          <div class="swiper-slide">
             <div class="slideshowSlide loading">
               <div class="slideshowSlideInner">
-                <div class="slideshowSlideCaptionWrapper">
-                  <div class="slideshowSlideCaption">
-                    <div class="slideshowSlideCaption__textArea">
-                      &nbsp;
-                      <h4>↳{{ 'loading' | translate }}...</h4>
-                    </div>
-                  </div>
-                </div>
+                <ngx-skeleton-loader
+                  count="1"
+                  [theme]="{
+                    height: '450px',
+                    width: '100%',
+                    background: 'transparent'
+                  }"
+                >
+                </ngx-skeleton-loader>
               </div>
             </div>
           </div>

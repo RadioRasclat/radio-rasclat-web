@@ -5,6 +5,7 @@
 }
 
 .blogPostList .blogPostEntry {
+  margin: 2rem 0;
   position: relative;
   transition: none;
   background: var(--card-light-background);
@@ -21,10 +22,6 @@
 
 .blogPostList .blogPostEntry .blogPostEntry__meta {
   margin-bottom: 1rem;
-}
-
-.blogPostList .blogPostEntry .blogPostEntry__meta .blogPostEntry__title h3 {
-  line-height: 35px;
 }
 
 .blogPostList .blogPostEntry .blogPostEntry__meta .blogPostEntry__date {

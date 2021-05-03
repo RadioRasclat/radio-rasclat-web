@@ -16,6 +16,8 @@ import { TooltipModule } from 'ng2-tooltip-directive';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import icons from '../../../assets/svg/svg-icons';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { ProjectsSliderComponent } from './projects-slider/projects-slider.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -31,13 +33,15 @@ import { ProjectsListComponent } from './projects-list/projects-list.component';
     SvgIconsModule.forRoot({
       icons,
     }),
+    NgxSkeletonLoaderModule,
   ],
   declarations: [
     ProjectsComponent,
     ProjectsSingleComponent,
     ProjectsListComponent,
+    ProjectsSliderComponent,
   ],
-  exports: [ProjectsListComponent],
+  exports: [ProjectsListComponent, ProjectsSliderComponent],
   providers: [ApiService, Title],
 })
 export class ProjectsModule {}

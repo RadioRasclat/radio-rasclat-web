@@ -1,8 +1,8 @@
 <div class="container">
   <app-page-title
-    [title]="'projects' | translate"
+    [title]="'events' | translate"
     [isLink]="true"
-    [url]="'/projects'"
+    [url]="'/events'"
   ></app-page-title>
 
   <app-page-banner [image]="project?.image"></app-page-banner>
@@ -22,11 +22,11 @@
                 >
               </div>
               <div class="projectsEntry__title">
-                <h1 [style.color]="hex">↳{{ project?.title }}</h1>
+                <h1 [style.color]="hex">{{ project?.title }}</h1>
               </div>
             </div>
             <div class="projectsEntry__excerpt">
-              <p [innerHTML]="project?.description"></p>
+              <span [innerHTML]="project?.description"></span>
             </div>
           </div>
         </div>

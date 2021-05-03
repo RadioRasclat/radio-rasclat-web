@@ -1,5 +1,5 @@
 .textSeperator {
-  padding: 1.5rem 0 1rem;
+  padding: 2rem 0 1.5rem;
   text-align: center;
   font-family: "Trash", sans-serif;
   font-size: 2rem;
@@ -8,24 +8,20 @@
 
 .textSeperator.active {
   background: var(--card-background-hover);
-  transition: all 0.15s ease;
-}
-
-@media only screen and (min-width: 32rem) {
-  .textSeperator {
-    font-size: 3rem;
-  }
+  transition: var(--transition-time);
 }
 
 @media only screen and (min-width: 48rem) {
+
   .textSeperator {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 
 @media only screen and (min-width: 64rem) {
+
   .textSeperator {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 
   .textSeperator.border-left {

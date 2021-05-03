@@ -23,7 +23,7 @@
 
 .liveInfo .playerControls {
   position: relative;
-  margin-right: 0.5rem;
+  margin-right: .5rem;
   width: 1rem;
 }
 
@@ -41,6 +41,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 32rem) {
+
   svg-icon {
     width: 12px;
     height: 12px;
@@ -48,6 +49,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 48rem) {
+
   svg-icon {
     width: 13px;
     height: 13px;
@@ -55,6 +57,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 64rem) {
+
   svg-icon {
     width: 14px;
     height: 14px;
@@ -62,6 +65,7 @@ svg-icon {
 }
 
 @media only screen and (min-width: 80rem) {
+
   svg-icon {
     width: 15px;
     height: 15px;

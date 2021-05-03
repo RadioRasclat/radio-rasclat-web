@@ -1,5 +1,47 @@
 # Changelog
 
+## [4.2.1] - 2021-05-02
+
+### New
+
+- Projects-Slider: Displays all our recently hosted events.
+- Adds a footer with our latest blog posts.
+
+### Changes
+
+- Updated partner logos with their corresponding links.
+- Code cleanup.
+- UI improvements.
+- The new reordered homepage gives you a better overview.
+- New browser and SEO friendly meta tags.
+- Stylelint automation.
+- Font-size adjustments.
+
+### Bug-Fixes
+
+- Fix line-clamp issue that some strings were missing on WebKit.
+
+## [4.2.0] - 2021-04-15
+
+### New
+
+- Animations! Everything feels a little more dynamic now.
+- Less opaque colors and rounded borders make the design feel lighter and more modern.
+- New loading indicators structure the page even before the content.
+- There is a new typeface for our paragraphs texts.
+
+### Changes
+
+- Removes arrow signs before headlines.
+- UI improvements on sub-pages.
+- Updates translation strings.
+
+### Bug-Fixes
+
+- Fix text wrap on genre tags by cutting overflow with an ellipsis.
+- Fixes a bug that the whole content slides down when the navigation is expanded.
+- Fixes a bug where images from the broadcast description fell out of the container and were not responsive.
+
 ## [4.1.0] - 2021-03-03
 
 ### New
@@ -116,6 +158,8 @@ We present Radio Rasclat Web in version four. The entire application has been en
 
 - Responsive UI issues.
 
+[4.2.1]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.1
+[4.2.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.0
 [4.1.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.1.0
 [4.0.4]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.0.4
 [4.0.3]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.0.3

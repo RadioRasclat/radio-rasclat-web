@@ -2,7 +2,7 @@
   <div class="aboutPage">
     <app-page-title [title]="'about' | translate"></app-page-title>
     <app-page-banner
-      [image]="'./../../../assets/images/radio-rasclat-spinner.gif'"
+      [image]="'./../../../assets/images/radio-rasclat-about.jpg'"
     ></app-page-banner>
     <app-text-seperator [text]="'„Wheel up.“'"></app-text-seperator>
     <div class="grid grid-gap-md">
@@ -12,21 +12,19 @@
       </div>
       <div class="col-12 col-4@md">
         <p>
-          <strong
-            >Stimulating the gun-finger with Bass Music from Kassel.</strong
-          >
+          <strong>Community and non-profit radio station in Kassel.</strong>
         </p>
       </div>
       <div class="col-12 col-8@md">
         <p>
-          Radio Rasclat is a non-commercial internet radio station which is
-          going to stream your music to the web, again! It offers you a platform
-          to play & try out. It serves as a place for the exchange, dialogue and
-          cooperation of music. Founded and curated in 2019, the radio returns
-          to the new venue at KMMN 3.
+          Radio Rasclat is a non-profit community radio station based in Kassel
+          - broadcasting a wide range of underground music, events, live talks
+          and arts. It serves as a place for the exchange, dialogue and
+          cooperation of music and performative arts.
         </p>
       </div>
     </div>
+    <app-page-title [title]="'Milestones'"></app-page-title>
     <div class="grid grid-gap-md">
       <div class="col-12 col-4@md">
         <h5>{{ 'season' | translate }} °1</h5>
@@ -87,7 +85,8 @@
         <p>
           We would like to thank all our amazing artists and guests such as
           <span [hidden]="isLoading" *ngFor="let artist of artists">
-            {{ artist?.title }},
+            <a routerLink="/artists/{{ artist?.slug }}">{{ artist?.title }}</a
+            >,
           </span>
           who have been part of the program!
         </p>
@@ -97,16 +96,60 @@
     <div class="partnersList">
       <div class="grid-auto-md grid-auto-xl@md grid-gap-md">
         <div class="partner">
-          <img src="assets/partners/uni-kassel.svg" alt="Universität Kassel" />
+          <a
+            href="https://www.kassel.de/index.php"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/kassel.svg" alt="Kassel Kulturamt" />
+          </a>
         </div>
         <div class="partner">
-          <img
-            src="assets/partners/kunsthochschule-kassel.svg"
-            alt="Kunsthochschule Kassel"
-          />
+          <a
+            href="https://www.uni-kassel.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/partners/uni-kassel.svg"
+              alt="Universität Kassel"
+            />
+          </a>
         </div>
         <div class="partner">
-          <img src="assets/partners/feiertag.svg" alt="Galerie Feiertag" />
+          <a
+            href="https://www.kunsthochschulekassel.de/willkommen.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="assets/partners/kunsthochschule-kassel.svg"
+              alt="Kunsthochschule Kassel"
+            />
+          </a>
+        </div>
+        <div class="partner">
+          <a href="https://r-ein.de/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/partners/r-ein.svg" alt="R:EIN" />
+          </a>
+        </div>
+        <div class="partner">
+          <a
+            href="https://www.instagram.com/feiertag_/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/feiertag.svg" alt="Galerie Feiertag" />
+          </a>
+        </div>
+        <div class="partner">
+          <a
+            href="https://www.facebook.com/KMMNSPACE/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/partners/kmmn.svg" alt="KMMN" />
+          </a>
         </div>
       </div>
     </div>

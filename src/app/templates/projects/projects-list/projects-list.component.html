@@ -17,7 +17,7 @@
         <div class="projectsEntry__wrapper">
           <div class="projectsEntry__header">
             <div class="projectsEntry__image__container">
-              <a routerLink="/projects/project/{{ project?.slug }}">
+              <a routerLink="/events/event/{{ project?.slug }}">
                 <figure class="projectsListBanner">
                   <img
                     [defaultImage]="defaultImage"
@@ -35,24 +35,24 @@
                 {{ project?.timeStart | timeago }}
               </div>
               <div class="projectsEntry__title">
-                <a routerLink="/projects/project/{{ project?.slug }}">
-                  <h3>↳{{ project?.title }}</h3>
+                <a routerLink="/events/event/{{ project?.slug }}">
+                  <h3>{{ project?.title }}</h3>
                 </a>
               </div>
             </div>
             <div class="projectsEntry__excerpt">
-              <p
+              <span
                 [innerHTML]="
                   project?.description.length > 300
                     ? (project?.description | slice: 0:300) + '...'
                     : project?.description
                 "
-              ></p>
+              ></span>
             </div>
             <div class="projectsEntry__readMore">
               <a
                 class="btn btn-secondary"
-                routerLink="/projects/project/{{ project?.slug }}"
+                routerLink="/events/event/{{ project?.slug }}"
                 >{{ 'readMore' | translate }} ></a
               >
             </div>

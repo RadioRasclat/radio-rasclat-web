@@ -13,7 +13,7 @@
   background-color: var(--card-background);
   position: relative;
 
-  &::before {
+  &:before {
     content: "";
     position: absolute;
     // match the grid gap for border thickness
@@ -27,7 +27,7 @@
 }
 
 .recording:hover > .recording__wrapper {
-  transition: all 0.15s ease;
+  transition: var(--transition-time);
   background-color: var(--card-background-hover);
 }
 
@@ -37,7 +37,7 @@
 }
 
 .recording__wrapper {
-  padding: 1rem;
+  padding: 2rem;
   position: relative;
   background-color: var(--card-background);
 }
@@ -51,30 +51,38 @@
 }
 
 .recording__tags {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.recording__tags__single::after {
+.recording__tags__single:after {
   content: "•";
 }
 
-.recording__tags__single:last-child::after {
+.recording__tags__single:last-child:after {
   content: "";
 }
 
 .recording__tags a {
   text-decoration: underline;
+  transition: var(--transition-time);
 }
 
 .recording__dates {
   margin-bottom: 1rem;
 }
 
+.recording__title a h5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 .recording__image__container {
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 .recording__image__container figure.square {
@@ -97,7 +105,16 @@
   object-position: center;
 }
 
+@media only screen and (min-width: 32rem) {
+
+  .recording__info__container {
+    height: auto;
+    min-height: 7rem;
+  }
+}
+
 @media only screen and (min-width: 48rem) {
+
   .recording.placeholder {
     display: block;
   }
@@ -111,12 +128,19 @@
   }
 
   .recording__info__container {
-    height: 128px;
+    height: auto;
+    min-height: 8rem;
   }
 }
 
 @media only screen and (min-width: 64rem) {
+
   .recording.placeholder:nth-of-type(2) {
     display: block;
+  }
+
+  .recording__info__container {
+    height: auto;
+    min-height: 9rem;
   }
 }

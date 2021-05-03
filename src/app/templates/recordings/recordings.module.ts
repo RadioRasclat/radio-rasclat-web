@@ -18,6 +18,7 @@ import { SlideshowComponent } from '../home/slideshow/slideshow.component';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import icons from '../../../assets/svg/svg-icons';
 import { RecordingsListComponent } from './recordings-list/recordings-list.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { RecordingsListComponent } from './recordings-list/recordings-list.compo
     SvgIconsModule.forRoot({
       icons,
     }),
+    NgxSkeletonLoaderModule,
   ],
   declarations: [
     RecordingsComponent,

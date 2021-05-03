@@ -1,6 +1,17 @@
-<span *ngIf="isLoading">
-  <app-loader></app-loader>
-</span>
+<div *ngIf="isLoading">
+  <span class="liveInfo center">
+    <span class="liveInfo__wrapper">
+      <ngx-skeleton-loader
+        count="1"
+        [theme]="{
+          height: '1.5rem',
+          width: '10rem',
+          margin: '0'
+        }"
+      ></ngx-skeleton-loader>
+    </span>
+  </span>
+</div>
 <div *ngIf="!isLoading">
   <span
     (click)="play()"

@@ -13,26 +13,34 @@
   </app-slideshow>
 
   <app-text-seperator
-    [hidden]="isLoading"
-    [text]="'latestBroadcasts' | translate"
-    [isLink]="false"
+    [text]="'(' + recordings.length + ') ' + ('broadcasts' | translate) + ' >'"
+    [isLink]="true"
+    [isLoading]="isLoading"
+    [url]="'/broadcasts'"
   >
   </app-text-seperator>
 
   <app-recordings-gallery
     [recordings]="recordings"
-    [hidden]="isLoading"
+    [isLoading]="isLoading"
     [limit]="8"
   >
   </app-recordings-gallery>
 
   <app-text-seperator
-    [text]="'(' + recordings.length + ') ' + ('viewAll' | translate) + ' >'"
+    [text]="'(' + projects.length + ') ' + ('events' | translate) + ' >'"
     [isLink]="true"
-    [url]="'/broadcasts'"
-    [hidden]="isLoading"
+    [isLoading]="isLoading"
+    [url]="'/events'"
   >
   </app-text-seperator>
+
+  <app-projects-slider
+    [projects]="projects"
+    [isLoading]="isLoading"
+    [limit]="8"
+  >
+  </app-projects-slider>
 </div>
 
 <div class="container">
@@ -40,13 +48,13 @@
     <div class="col-12 col-6@md">
       <app-text-seperator
         [text]="('shows' | translate) + ' >'"
+        [isLoading]="isLoading"
         [isLink]="true"
         [url]="'/shows'"
-        [hidden]="isLoading"
       ></app-text-seperator>
 
       <app-shows-gallery
-        [hidden]="isLoading"
+        [isLoading]="isLoading"
         [shows]="shows"
         [limit]="1"
       ></app-shows-gallery>
@@ -54,9 +62,9 @@
     <div class="col-12 col-6@md scheduleColumn">
       <app-text-seperator
         [text]="('schedule' | translate) + ' >'"
+        [isLoading]="isLoading"
         [isLink]="true"
         [url]="'/schedule'"
-        [hidden]="isLoading"
       ></app-text-seperator>
 
       <app-schedule-day-list

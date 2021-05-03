@@ -1,12 +1,15 @@
 ::-webkit-input-placeholder {
   color: var(--text-color-light);
 }
+
 ::-moz-placeholder {
   color: var(--text-color-light);
 }
+
 :-ms-input-placeholder {
   color: var(--text-color-light);
 }
+
 :-moz-placeholder {
   color: var(--text-color-light);
 }
@@ -21,6 +24,21 @@
   color: var(--text-color);
 }
 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: var(--page-background);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--page-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border: 0;
+}
+
 * {
   outline: none !important;
 }
@@ -30,12 +48,21 @@ html {
 }
 
 body {
-  font-family: "Neue Haas Grotesk Text", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  font-family: "Circular Book",
+    "Neue Haas Grotesk Text",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 90%;
+  font-size: 100%;
   background-color: var(--page-background);
   color: var(--text-color);
 }
@@ -53,29 +80,44 @@ body {
   padding: 0 1rem;
 }
 
+@media only screen and (min-width: 48rem) {
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .container-full {
+    padding: 0 2rem;
+  }
+}
+
 /* responsive font-sizes */
 
 @media only screen and (min-width: 32rem) {
+
   body {
-    font-size: 100%;
+    font-size: 105%;
   }
 }
 
 @media only screen and (min-width: 48rem) {
+
   body {
     font-size: 110%;
   }
 }
 
 @media only screen and (min-width: 64rem) {
+
   body {
-    font-size: 120%;
+    font-size: 115%;
   }
 }
 
 @media only screen and (min-width: 80rem) {
+
   body {
-    font-size: 130%;
+    font-size: 125%;
   }
 }
 
@@ -96,7 +138,7 @@ h4,
 h5,
 h6 {
   font-family: "Trash Medium", sans-serif;
-  line-height: 35px;
+  line-height: 120%;
 }
 
 h1 {
@@ -128,7 +170,7 @@ h6 {
 hr {
   border: 0;
   height: 0;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--card-border);
   margin: 1rem 0;
 }
 
@@ -137,6 +179,7 @@ hr {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: var(--transition-time);
 }
 
 a.underline {
@@ -152,6 +195,7 @@ a:hover {
 
 p a {
   text-decoration: underline;
+  transition: var(--transition-time);
 }
 
 p a:hover {
@@ -197,14 +241,6 @@ li:last-child {
   margin-bottom: 0;
 }
 
-li a {
-  text-decoration: underline;
-}
-
-li a:hover {
-  text-decoration: underline;
-}
-
 /* Text Alignments */
 
 .text-left {
@@ -228,11 +264,12 @@ svg-icon {
 /* Buttons */
 
 .btn {
-  padding: 0.6rem 1.5rem 0.5rem;
+  padding: .6rem 1.5rem .5rem;
   border-radius: var(--btn-border-radius);
   cursor: pointer;
   font-family: "Trash Medium", sans-serif;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -256,7 +293,7 @@ svg-icon {
 }
 
 .medium-zoom--opened .medium-zoom-overlay {
-  opacity: 0.87 !important;
+  opacity: .87 !important;
   z-index: map-get($z-index, image-zoom-overlay);
   background: var(--page-background) !important;
 }

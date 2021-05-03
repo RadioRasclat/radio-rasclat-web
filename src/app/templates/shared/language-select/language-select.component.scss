@@ -2,20 +2,20 @@
   width: 100%;
   display: block;
   position: relative;
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   border: 1px solid var(--page-background);
   cursor: pointer;
 }
 
 .language__single.active {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--text-color-light);
 }
 
 .language__single__wrapper {
   background: var(--card-light-background);
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   padding: 1rem;
-  transition: all 0.15s ease;
+  transition: var(--transition-time);
 }
 
 .language__single__wrapper:hover {
@@ -28,8 +28,8 @@
   background: var(--primary-color);
   display: block;
   height: 100%;
-  border-radius: 5px;
-  opacity: 0.05;
+  border-radius: var(--card-border-radius);
+  opacity: .05;
 }
 
 .progressbar:hover ~ .language__single__wrapper {
@@ -38,5 +38,5 @@
 }
 
 .translationProgress {
-  font-weight: 200;
+  color: var(--text-color-light);
 }

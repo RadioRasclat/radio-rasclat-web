@@ -8,6 +8,7 @@ import { ArtistsSingleComponent } from './artists-single/artists-single.componen
 import { SharedModule } from '../shared';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { RecordingsModule } from '@app/templates/recordings/recordings.module';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { RecordingsModule } from '@app/templates/recordings/recordings.module';
     SharedModule,
     LazyLoadImageModule,
     RecordingsModule,
+    NgxSkeletonLoaderModule,
   ],
   declarations: [ArtistsComponent, ArtistsSingleComponent],
 })

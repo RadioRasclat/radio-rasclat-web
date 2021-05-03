@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isLoading">
   <app-page-title [title]="'broadcasts' | translate"></app-page-title>
 
   <div *ngFor="let year of createRange(years.min, years.max)">
@@ -6,16 +6,27 @@
       <div *ngIf="getRecordingsByDate(year, 11 - monthIndex).length !== 0">
         <app-text-seperator
           [text]="(month | translate) + ' ' + year"
+          [isLoading]="isLoading"
           [isLink]="false"
         >
         </app-text-seperator>
 
         <app-recordings-gallery
           [recordings]="getRecordingsByDate(year, 11 - monthIndex)"
-          [hidden]="isLoading"
+          [isLoading]="isLoading"
         >
         </app-recordings-gallery>
       </div>
     </div>
   </div>
+</div>
+
+<div class="container" *ngIf="isLoading">
+  <app-page-title [title]="'broadcasts' | translate"></app-page-title>
+
+  <app-text-seperator [isLoading]="isLoading" [isLink]="false">
+  </app-text-seperator>
+
+  <app-recordings-gallery [isLoading]="isLoading" [limit]="8">
+  </app-recordings-gallery>
 </div>

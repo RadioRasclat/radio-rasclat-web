@@ -10,7 +10,7 @@ const routes: Routes = [
     {
       path: 'blog',
       component: BlogComponent,
-      data: { title: 'Radio Rasclat • Blog' },
+      data: { title: 'Radio Rasclat — Blog' },
     },
     {
       path: 'blog/post/:id',

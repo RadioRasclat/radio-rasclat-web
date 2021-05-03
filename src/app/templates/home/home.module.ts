@@ -13,6 +13,7 @@ import { RecordingsModule } from '../recordings/recordings.module';
 import { ShowsModule } from '../shows/shows.module';
 import { ScheduleModule } from '../schedule/schedule.module';
 import { ModalModule } from '@app/templates/shared/modal';
+import { ProjectsModule } from '@app/templates/projects/projects.module';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { ModalModule } from '@app/templates/shared/modal';
     ShowsModule,
     ScheduleModule,
     ModalModule,
+    ProjectsModule,
   ],
   declarations: [HomeComponent],
   providers: [ApiService, Title],

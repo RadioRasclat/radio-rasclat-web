@@ -1,7 +1,7 @@
 :root {
-  --container-width: 1500px;
-
+  --container-width: 1600px;
   --border-radius: 25px;
   --card-border-radius: var(--border-radius);
   --btn-border-radius: var(--border-radius);
+  --transition-time: all .15s ease-in-out;
 }

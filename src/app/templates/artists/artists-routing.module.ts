@@ -10,7 +10,7 @@ const routes: Routes = [
     {
       path: 'artists',
       component: ArtistsComponent,
-      data: { title: 'Radio Rasclat • Artists' },
+      data: { title: 'Radio Rasclat — Artists' },
     },
     {
       path: 'artists/:id',

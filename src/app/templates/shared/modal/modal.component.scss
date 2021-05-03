@@ -1,6 +1,9 @@
-﻿@import "~theme/_z-index.scss";
+@import "~theme/_z-index.scss";
 
-body.modal-open {
+body.modal-open,
+html.modal-open {
+  margin: 0;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -24,7 +27,7 @@ modal {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #000000;
   opacity: 0.75;
   z-index: map-get($z-index, modal-overlay);
 }
@@ -33,6 +36,7 @@ modal {
   padding: 2.5rem 2rem;
   background: var(--page-background);
   margin: 0;
+  border-radius: var(--border-radius);
 }
 
 @media only screen and (min-width: 32rem) {

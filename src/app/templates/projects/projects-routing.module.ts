@@ -8,12 +8,12 @@ import { ProjectsSingleComponent } from './projects-single/projects-single.compo
 const routes: Routes = [
   Shell.childRoutes([
     {
-      path: 'projects',
+      path: 'events',
       component: ProjectsComponent,
-      data: { title: 'Radio Rasclat • Projects' },
+      data: { title: 'Radio Rasclat — Events' },
     },
     {
-      path: 'projects/project/:id',
+      path: 'events/event/:id',
       component: ProjectsSingleComponent,
     },
   ]),

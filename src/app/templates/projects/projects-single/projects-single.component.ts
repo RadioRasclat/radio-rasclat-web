@@ -29,7 +29,7 @@ export class ProjectsSingleComponent implements OnInit {
   ) {}
 
   public setTitle({ title }: { title: any }) {
-    this.titleService.setTitle('Radio Rasclat • ' + title);
+    this.titleService.setTitle('Radio Rasclat — ' + title);
   }
 
   ngOnInit() {

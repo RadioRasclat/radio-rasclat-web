@@ -9,7 +9,7 @@ const routes: Routes = [
     {
       path: 'search',
       component: SearchComponent,
-      data: { title: 'Radio Rasclat • Search' },
+      data: { title: 'Radio Rasclat — Search' },
     },
   ]),
 ];

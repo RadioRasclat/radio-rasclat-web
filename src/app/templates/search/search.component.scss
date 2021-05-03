@@ -1,8 +1,9 @@
 .filterPanel h4 {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 ::ng-deep {
+
   input.ais-SearchBox-input {
     outline: none;
     border: none;
@@ -18,14 +19,14 @@
   }
 
   span.ais-RefinementList-labelText {
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
   }
 
   span.ais-RefinementList-count {
     background: var(--secondary-color-light);
     color: var(--secondary-color);
-    padding: 0 0.5rem;
-    border-radius: 5px;
+    padding: 0 .5rem;
+    border-radius: var(--card-border-radius);
     font-size: 80%;
   }
 
@@ -36,12 +37,12 @@
   }
 
   li.ais-RefinementList-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
 
   .ais-Panel {
     margin-bottom: 3rem;
-    padding: 0.2rem 1rem;
+    padding: .2rem 1rem;
     background: var(--card-light-background);
     border-radius: var(--card-border-radius);
   }
@@ -68,7 +69,7 @@
   }
 
   li.ais-Pagination-item {
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
   }
 
   li.ais-Pagination-item a {
@@ -86,7 +87,9 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   ::ng-deep {
+
     input.ais-SearchBox-input {
       font-size: 3rem;
     }
@@ -94,7 +97,9 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   ::ng-deep {
+
     input.ais-SearchBox-input {
       font-size: 4rem;
     }
@@ -102,7 +107,9 @@
 }
 
 @media only screen and (min-width: 32rem) {
+
   ::ng-deep {
+
     input.ais-SearchBox-input {
       font-size: 4.5rem;
     }

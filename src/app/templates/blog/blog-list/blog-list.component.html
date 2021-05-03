@@ -41,18 +41,18 @@
               </div>
               <div class="blogPostEntry__title">
                 <a routerLink="/blog/post/{{ blogPost?.slug }}">
-                  <h3>↳{{ blogPost?.title }}</h3>
+                  <h3>{{ blogPost?.title }}</h3>
                 </a>
               </div>
             </div>
             <div class="blogPostEntry__excerpt">
-              <p
+              <span
                 [innerHTML]="
                   blogPost?.description.length > 300
                     ? (blogPost?.description | slice: 0:300) + '...'
                     : blogPost?.description
                 "
-              ></p>
+              ></span>
             </div>
             <div class="blogPostEntry__readMore">
               <a

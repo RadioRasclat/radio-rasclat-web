@@ -3,7 +3,7 @@
   </app-text-seperator>
 </div>
 
-<div class="showGallery">
+<div class="showGallery" *ngIf="!isLoading == true">
   <div class="grid-auto-md grid-auto-xl@md">
     <div
       class="show"
@@ -12,17 +12,13 @@
     >
       <div class="show__wrapper">
         <div class="show__info__container">
-          <div class="show__description">
-            {{
-              show?.description.length > 30
-                ? (show?.description | safeHtml | slice: 0:30) + '...'
-                : show?.description
-            }}
-          </div>
           <div class="show__title">
-            <h4>
-              <a routerLink="/shows/{{ show?.slug }}"> ↳{{ show?.title }} </a>
-            </h4>
+            <a routerLink="/shows/{{ show?.slug }}">
+              <h5>{{ show?.title }}</h5>
+            </a>
+          </div>
+          <div class="show__description">
+            {{ show?.description | safeHtml }}
           </div>
         </div>
         <div class="show__image__container">
@@ -38,5 +34,47 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="showGallery" *ngIf="isLoading">
+  <div class="grid-auto-md grid-auto-xl@md">
+    <ng-container *ngFor="let i of [].constructor(limit)">
+      <div class="show">
+        <div class="show__wrapper">
+          <div class="show__info__container">
+            <div class="show__title">
+              <ngx-skeleton-loader
+                count="1"
+                [theme]="{
+                  height: '1.2rem',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+            <div class="show__description">
+              <ngx-skeleton-loader
+                count="2"
+                [theme]="{
+                  height: '1rem',
+                  width: '100%'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+          </div>
+          <div class="show__image__container">
+            <a routerLink="/shows/{{ show?.slug }}">
+              <figure class="banner">
+                <img
+                  [defaultImage]="defaultImage"
+                  [lazyLoad]="show?.image"
+                  alt="{{ show?.title }}"
+                />
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
