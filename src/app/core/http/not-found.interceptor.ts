@@ -20,9 +20,8 @@ export class NotFoundInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     return next.handle(req).catch((response: HttpErrorResponse) => {
-      console.log('test', response);
       if (response.status === 404) {
-        this.router.navigateByUrl('/not-found', { replaceUrl: true });
+        this.router.navigateByUrl('/404', { replaceUrl: true });
       }
 
       return ErrorObservable.create(response);

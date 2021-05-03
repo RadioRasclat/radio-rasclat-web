@@ -7,9 +7,9 @@ import { NotFoundComponent } from './not-found.component';
 const routes: Routes = [
   Shell.childRoutes([
     {
-      path: 'not-found',
+      path: '404',
       component: NotFoundComponent,
-      data: { title: 'Radio Rasclat • 404' },
+      data: { title: 'Radio Rasclat — 404' },
     },
   ]),
 ];
