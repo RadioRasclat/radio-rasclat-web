@@ -16,6 +16,7 @@ import { HttpCacheService } from './http/http-cache.service';
 import { ApiPrefixInterceptor } from './http/api-prefix.interceptor';
 import { ErrorHandlerInterceptor } from './http/error-handler.interceptor';
 import { CacheInterceptor } from './http/cache.interceptor';
+import { NotFoundInterceptor } from './http/not-found.interceptor';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule, TranslateModule, RouterModule],
@@ -27,6 +28,7 @@ import { CacheInterceptor } from './http/cache.interceptor';
     ApiPrefixInterceptor,
     ErrorHandlerInterceptor,
     CacheInterceptor,
+    NotFoundInterceptor,
     {
       provide: HttpClient,
       useClass: HttpService,

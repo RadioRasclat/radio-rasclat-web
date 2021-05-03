@@ -6,6 +6,9 @@ import { Title } from '@angular/platform-browser';
 import Vibrant from 'node-vibrant';
 import { Palette } from 'node-vibrant/lib/color';
 import mediumZoom from 'medium-zoom';
+import { Artist } from '@app/core/models/Artist';
+import { Recording } from '@app/core/models/Recording';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-artists-single',
@@ -13,8 +16,8 @@ import mediumZoom from 'medium-zoom';
   styleUrls: ['./artists-single.component.scss'],
 })
 export class ArtistsSingleComponent implements OnInit, AfterViewInit {
-  artist: any;
-  recordings: any;
+  artist: Artist;
+  recordings: Recording[];
   title: any;
   hex: any;
   isLoading = false;
@@ -28,7 +31,8 @@ export class ArtistsSingleComponent implements OnInit, AfterViewInit {
     private apiService: ApiService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private toastService: ToastrService
   ) {}
 
   public setTitle({ title }: { title: any }) {
@@ -39,29 +43,37 @@ export class ArtistsSingleComponent implements OnInit, AfterViewInit {
     this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
-      this.apiService
-        .getArtist({ artistId: this.id })
-        .pipe(
-          finalize(() => {
-            this.isLoading = false;
-          })
-        )
-        .subscribe((artist) => {
-          this.artist = artist;
-          if (typeof artist.recordings[0]['title'] !== 'undefined') {
-            this.recordings = artist.recordings;
-          } else {
-            this.recordings = [];
-          }
-          this.setTitle({ title: this.artist.title });
-          Vibrant.from(
-            'https://cors-proxy.radio-rasclat.com/' + this.artist.image
+      if (this.id) {
+        this.apiService
+          .getArtist({ artistId: this.id })
+          .pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
           )
-            .getPalette()
-            .then((palette) => {
-              this.hex = palette.Vibrant.hex;
-            });
-        });
+          .subscribe((artist) => {
+            if (artist && artist.status !== 404) {
+              this.artist = artist;
+              if (typeof artist.recordings[0]['title'] !== 'undefined') {
+                this.recordings = artist.recordings;
+              } else {
+                this.recordings = [];
+              }
+              this.setTitle({ title: this.artist.title });
+              Vibrant.from(
+                'https://cors-proxy.radio-rasclat.com/' + this.artist.image
+              )
+                .getPalette()
+                .then((palette) => {
+                  this.hex = palette.Vibrant.hex;
+                });
+            } else {
+              this.toastService.info(artist.message, artist.status, {
+                closeButton: true,
+              });
+            }
+          });
+      }
     });
   }
 

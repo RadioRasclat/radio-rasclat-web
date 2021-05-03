@@ -16,10 +16,8 @@ export class ApiService {
       .get(environment.serverUrl + '/artists', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Artists konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -29,10 +27,8 @@ export class ApiService {
       .get(environment.serverUrl + '/artists/artist/' + artistId, withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Der Interpret konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -42,10 +38,8 @@ export class ApiService {
       .get(environment.serverUrl + '/blog/posts', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Blog-Einträge konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -55,10 +49,8 @@ export class ApiService {
       .get(environment.serverUrl + '/blog/post/' + blogPostId, withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Der Blog-Eintrag konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -68,10 +60,8 @@ export class ApiService {
       .get(environment.serverUrl + '/genres', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Genres konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -81,10 +71,8 @@ export class ApiService {
       .get(environment.serverUrl + '/recordings', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Recordings konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -97,10 +85,8 @@ export class ApiService {
       )
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Aufnahme konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -110,10 +96,8 @@ export class ApiService {
       .get(environment.serverUrl + '/recordings/most-viewed', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Aufnahme konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -123,10 +107,8 @@ export class ApiService {
       .get(environment.serverUrl + '/recordings/top-3-viewed', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Aufnahme konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -136,10 +118,8 @@ export class ApiService {
       .get(environment.serverUrl + '/projects', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Projekt-Einträge konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -152,10 +132,8 @@ export class ApiService {
       )
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Der Projekt-Eintrag konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -165,10 +143,8 @@ export class ApiService {
       .get(environment.serverUrl + '/shows', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Shows konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -178,10 +154,8 @@ export class ApiService {
       .get(environment.serverUrl + '/shows/recently-updated', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Shows konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -191,10 +165,8 @@ export class ApiService {
       .get(environment.serverUrl + '/shows/show/' + showId)
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die Show konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -204,10 +176,8 @@ export class ApiService {
       .get(environment.serverUrl + '/meta/shows/current')
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die aktuelle Show konnte nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -215,10 +185,8 @@ export class ApiService {
   getNextShow() {
     return this.httpClient.get(environment.serverUrl + '/meta/shows/next').pipe(
       map((body: any) => body),
-      catchError(() =>
-        of(
-          'Es ist ein Fehler aufgetreten. Die nächste Show konnte nicht geladen werden.'
-        )
+      catchError((err) =>
+        of({ status: err.status, message: err.error.message })
       )
     );
   }
@@ -226,10 +194,8 @@ export class ApiService {
   getSchedule() {
     return this.httpClient.get('/meta/schedule', withCache()).pipe(
       map((body: any) => body),
-      catchError(() =>
-        of(
-          'Es ist ein Fehler aufgetreten. Die Show konnte nicht geladen werden.'
-        )
+      catchError((err) =>
+        of({ status: err.status, message: err.error.message })
       )
     );
   }
@@ -237,10 +203,8 @@ export class ApiService {
   getLiveInfo() {
     return this.httpClient.get('/meta/live-info').pipe(
       map((body: any) => body),
-      catchError(() =>
-        of(
-          'Es ist ein Fehler aufgetreten. Die Show konnte nicht geladen werden.'
-        )
+      catchError((err) =>
+        of({ status: err.status, message: err.error.message })
       )
     );
   }
@@ -250,10 +214,8 @@ export class ApiService {
       .get(environment.serverUrl + '/languages', withCache())
       .pipe(
         map((body: any) => body),
-        catchError(() =>
-          of(
-            'Es ist ein Fehler aufgetreten. Die verfügbaren Sprachen konnten nicht geladen werden.'
-          )
+        catchError((err) =>
+          of({ status: err.status, message: err.error.message })
         )
       );
   }
@@ -261,10 +223,8 @@ export class ApiService {
   getStatus() {
     return this.httpClient.get('/status').pipe(
       map((body: any) => body),
-      catchError(() =>
-        of(
-          'Es ist ein Fehler aufgetreten. Der Interpret konnte nicht geladen werden.'
-        )
+      catchError((err) =>
+        of({ status: err.status, message: err.error.message })
       )
     );
   }

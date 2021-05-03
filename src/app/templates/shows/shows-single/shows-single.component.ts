@@ -1,11 +1,14 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
-import { ApiService } from '../../../core/services/api.service';
+import { ApiService } from '@app/core/services/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import Vibrant from 'node-vibrant';
 import { Palette } from 'node-vibrant/lib/color';
 import mediumZoom from 'medium-zoom';
+import { Show } from '@app/core/models/Show';
+import { ToastrService } from 'ngx-toastr';
+import { Recording } from '@app/core/models/Recording';
 
 @Component({
   selector: 'app-shows-single',
@@ -13,8 +16,8 @@ import mediumZoom from 'medium-zoom';
   styleUrls: ['./shows-single.component.scss'],
 })
 export class ShowsSingleComponent implements OnInit, AfterViewInit {
-  show: any;
-  recordings: any;
+  show: Show;
+  recordings: Recording[];
   title: any;
   hex: any;
   isLoading = false;
@@ -28,7 +31,8 @@ export class ShowsSingleComponent implements OnInit, AfterViewInit {
     private apiService: ApiService,
     private route: ActivatedRoute,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private toastService: ToastrService
   ) {}
 
   public setTitle({ title }: { title: any }) {
@@ -39,29 +43,37 @@ export class ShowsSingleComponent implements OnInit, AfterViewInit {
     this.sub = this.route.params.subscribe((params) => {
       this.isLoading = true;
       this.id = params.id;
-      this.apiService
-        .getShow({ showId: this.id })
-        .pipe(
-          finalize(() => {
-            this.isLoading = false;
-          })
-        )
-        .subscribe((show) => {
-          this.show = show;
-          if (typeof show.recordings[0]['title'] !== 'undefined') {
-            this.recordings = show.recordings;
-          } else {
-            this.recordings = [];
-          }
-          this.setTitle({ title: this.show.title });
-          Vibrant.from(
-            'https://cors-proxy.radio-rasclat.com/' + this.show.image
+      if (this.id) {
+        this.apiService
+          .getShow({ showId: this.id })
+          .pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
           )
-            .getPalette()
-            .then((palette) => {
-              this.hex = palette.Vibrant.hex;
-            });
-        });
+          .subscribe((show) => {
+            if (show && show.status !== 404) {
+              this.show = show;
+              if (typeof show.recordings[0]['title'] !== 'undefined') {
+                this.recordings = show.recordings;
+              } else {
+                this.recordings = [];
+              }
+              this.setTitle({ title: this.show.title });
+              Vibrant.from(
+                'https://cors-proxy.radio-rasclat.com/' + this.show.image
+              )
+                .getPalette()
+                .then((palette) => {
+                  this.hex = palette.Vibrant.hex;
+                });
+            } else {
+              this.toastService.info(show.message, show.status, {
+                closeButton: true,
+              });
+            }
+          });
+      }
     });
   }
 

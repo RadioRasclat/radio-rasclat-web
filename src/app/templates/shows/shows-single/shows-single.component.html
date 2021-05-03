@@ -4,7 +4,7 @@
     [isLink]="true"
     [url]="'/shows'"
   ></app-page-title>
-  <div class="showSingle" *ngIf="!isLoading">
+  <div class="showSingle" *ngIf="show && !isLoading">
     <div class="grid grid-gap-md">
       <div class="col-4@sm">
         <div class="show__image__container">

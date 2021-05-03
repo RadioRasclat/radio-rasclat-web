@@ -60,6 +60,7 @@
     "ngx-skeleton-loader": "^2.9.1",
     "ngx-swiper-wrapper": "^9.0.1",
     "ngx-timeago": "^1.0.4",
+    "ngx-toastr": "^13.2.1",
     "node-vibrant": "^3.1.6",
     "opencollective-postinstall": "^2.0.3",
     "popper.js": "^1.16.1",

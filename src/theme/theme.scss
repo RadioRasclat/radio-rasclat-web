@@ -297,3 +297,19 @@ svg-icon {
   z-index: map-get($z-index, image-zoom-overlay);
   background: var(--page-background) !important;
 }
+
+/* notifications */
+
+.toast-container .ngx-toastr {
+  width: 400px;
+  border-radius: var(--border-radius);
+  box-shadow: none;
+}
+
+.toast-container .ngx-toastr:hover {
+  box-shadow: none;
+}
+
+.toast-info {
+  background-color: var(--secondary-color);
+}

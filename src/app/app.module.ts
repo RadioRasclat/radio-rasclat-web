@@ -12,10 +12,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CoreModule } from '@app/core';
 import { TimeagoModule } from 'ngx-timeago';
 import { SharedModule } from '@app/templates/shared';
+import { ToastrModule } from 'ngx-toastr';
 
 /* VIEWS */
 import { AboutModule } from '@app/templates/about/about.module';
 import { ArtistsModule } from '@app/templates/artists/artists.module';
+import { NotFoundModule } from '@app/templates/not-found/not-found.module';
 import { HomeModule } from './templates/home/home.module';
 import { BlogModule } from './templates/blog/blog.module';
 import { ProjectsModule } from './templates/projects/projects.module';
@@ -97,6 +99,7 @@ export class SentryErrorHandler implements ErrorHandler {
     ShellModule,
     HomeModule,
     ArtistsModule,
+    NotFoundModule,
     BlogModule,
     ProjectsModule,
     ImprintModule,
@@ -114,6 +117,13 @@ export class SentryErrorHandler implements ErrorHandler {
     NgAisModule.forRoot(),
     TimeagoModule.forRoot(),
     LazyLoadImageModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      progressBar: true,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: false,
+    }),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
