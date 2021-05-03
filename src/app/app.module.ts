@@ -118,7 +118,12 @@ export class SentryErrorHandler implements ErrorHandler {
     TimeagoModule.forRoot(),
     LazyLoadImageModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      progressBar: true,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: false,
+    }),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route,
   ],
   declarations: [AppComponent],
