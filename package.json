@@ -7,7 +7,7 @@
     "build": "npm run env -s && ng build --prod",
     "start": "npm run env -s && ng serve --aot",
     "serve:sw": "npm run build -s && npx http-server ./dist -p 4200",
-    "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
+    "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss --fix && htmlhint \"src\" --config .htmlhintrc",
     "test": "npm run env -s && ng test --code-coverage --watch=false",
     "test:ci": "npm run env -s && npm run lint -s && ng test --code-coverage --watch=false",
     "e2e": "npm run env -s && ng e2e",
@@ -84,7 +84,6 @@
     "hads": "^2.1.0",
     "htmlhint": "^0.14.2",
     "https-proxy-agent": "^5.0.0",
-    "husky": "^4.3.8",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -119,11 +118,6 @@
         }
       }
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "svg-to-ts": {
     "conversionType": "object",
