@@ -8,13 +8,21 @@
           </div>
           <div class="top__banner__inner__controls">
             <div class="top__banner__inner__controls_btn">
-              <a
-                class="btn btn-secondary"
-                href="http://opencollective.com/radio-rasclat"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ 'donate' | translate }} ></a
-              >
+              <a class="btn btn-secondary" (click)="openModal('donationBox')">
+                {{ 'donate' | translate }} >
+              </a>
+              <modal id="donationBox">
+                <h1>{{ 'donate' | translate }}</h1>
+                <hr />
+                <app-donation-box></app-donation-box>
+                <hr />
+                <a
+                  class="btn btn-secondary"
+                  (click)="closeModal('donationBox')"
+                >
+                  {{ 'close' | translate }}
+                </a>
+              </modal>
             </div>
             <a (click)="hideBanner()">
               <svg-icon key="menuClose"></svg-icon>
