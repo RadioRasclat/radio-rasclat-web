@@ -34,7 +34,7 @@
 
 .slideshowSlider {
   border-bottom: 1px solid var(--card-border);
-  padding: 1rem 0 1rem;
+  padding: 1rem 0 2rem;
 }
 
 .swiper-slide .slideshowSlide {
@@ -201,6 +201,13 @@
 @media only screen and (min-width: 64rem) {
 
   .swiper-slide {
-    width: 40% !important;
+    width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+
+  .swiper-slide {
+    width: 42% !important;
   }
 }
