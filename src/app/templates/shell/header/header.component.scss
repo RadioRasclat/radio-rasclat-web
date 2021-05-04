@@ -14,6 +14,7 @@ header .col-12 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
 
 header .mainHeader {
@@ -81,6 +82,10 @@ header .mainHeader .mainNavigation a.active .navLinkButton {
 
 @media only screen and (min-width: 48rem) {
 
+  header .col-12 {
+    height: 55px;
+  }
+
   header .mainHeader .mainLogo {
     margin-right: 1rem;
   }
@@ -129,6 +134,10 @@ header .mainHeader .mainNavigation a.active .navLinkButton {
 
 @media only screen and (min-width: 64rem) {
 
+  header .col-12 {
+    height: 60px;
+  }
+
   header svg-icon.svg-icon-menu,
   svg-icon.svg-icon-menuClose {
     width: 21px;
@@ -165,12 +174,12 @@ nav {
   position: sticky;
   position: -webkit-sticky;
   width: 100%;
-  top: 60px;
+  top: 51px;
 }
 
 nav.navVisible {
   position: absolute;
-  top: 60px;
+  top: 51px;
 }
 
 .infoBanner {
@@ -242,6 +251,14 @@ nav.navVisible {
 
 @media only screen and (min-width: 48rem) {
 
+  nav {
+    top: 56px;
+  }
+
+  nav.navVisible {
+    top: 56px;
+  }
+
   .navigation svg-icon {
     width: 14px;
   }
@@ -254,6 +271,14 @@ nav.navVisible {
 }
 
 @media only screen and (min-width: 64rem) {
+
+  nav {
+    top: 61px;
+  }
+
+  nav.navVisible {
+    top: 61px;
+  }
 
   .navigation {
     line-height: 28px;
