@@ -1,7 +1,7 @@
 <div class="grid" *ngIf="!isLoading">
   <div class="col-12">
     <div
-      class="textSeperator"
+      class="textSeparator"
       *ngIf="!isLink"
       [class.active]="active === true"
       [class.border-left]="border === true"
@@ -9,7 +9,7 @@
       {{ text }}
     </div>
     <div
-      class="textSeperator"
+      class="textSeparator"
       *ngIf="isLink"
       [class.active]="active === true"
       [class.border-left]="border === true"
@@ -22,7 +22,7 @@
 </div>
 <div class="grid" *ngIf="isLoading">
   <div class="col-12">
-    <div class="textSeperator">
+    <div class="textSeparator">
       <ngx-skeleton-loader
         count="1"
         [theme]="{

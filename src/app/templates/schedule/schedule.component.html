@@ -2,22 +2,22 @@
   <app-page-title [title]="'schedule' | translate"></app-page-title>
   <div class="grid grid-auto-cols@lg">
     <div class="col-12 col-6@md">
-      <app-text-seperator
+      <app-text-separator
         [text]="('week.this' | translate) + ' >'"
         [isLink]="true"
         [url]="'/schedule'"
         [active]="view === 'thisWeek'"
         (click)="view = 'thisWeek'"
-      ></app-text-seperator>
+      ></app-text-separator>
     </div>
     <div class="col-12 col-6@md scheduleColumn">
-      <app-text-seperator
+      <app-text-separator
         [text]="('week.next' | translate) + ' >'"
         [isLink]="true"
         [url]="'/schedule'"
         [active]="view === 'nextWeek'"
         (click)="view = 'nextWeek'"
-      ></app-text-seperator>
+      ></app-text-separator>
     </div>
   </div>
   <div *ngIf="view === 'thisWeek'">
