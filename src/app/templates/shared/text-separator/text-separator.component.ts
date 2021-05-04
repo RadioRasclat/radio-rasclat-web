@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-text-seperator',
-  templateUrl: './text-seperator.component.html',
-  styleUrls: ['./text-seperator.component.scss'],
+  selector: 'app-text-separator',
+  templateUrl: './text-separator.component.html',
+  styleUrls: ['./text-separator.component.scss'],
 })
-export class TextSeperatorComponent implements OnInit {
+export class TextSeparatorComponent implements OnInit {
   @Input() text: string;
   @Input() isLink: boolean;
   @Input() isLoading: boolean;

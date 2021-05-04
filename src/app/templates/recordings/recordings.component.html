@@ -4,12 +4,12 @@
   <div *ngFor="let year of createRange(years.min, years.max)">
     <div *ngFor="let month of months.slice().reverse(); let monthIndex = index">
       <div *ngIf="getRecordingsByDate(year, 11 - monthIndex).length !== 0">
-        <app-text-seperator
+        <app-text-separator
           [text]="(month | translate) + ' ' + year"
           [isLoading]="isLoading"
           [isLink]="false"
         >
-        </app-text-seperator>
+        </app-text-separator>
 
         <app-recordings-gallery
           [recordings]="getRecordingsByDate(year, 11 - monthIndex)"
@@ -24,8 +24,8 @@
 <div class="container" *ngIf="isLoading">
   <app-page-title [title]="'broadcasts' | translate"></app-page-title>
 
-  <app-text-seperator [isLoading]="isLoading" [isLink]="false">
-  </app-text-seperator>
+  <app-text-separator [isLoading]="isLoading" [isLink]="false">
+  </app-text-separator>
 
   <app-recordings-gallery [isLoading]="isLoading" [limit]="8">
   </app-recordings-gallery>

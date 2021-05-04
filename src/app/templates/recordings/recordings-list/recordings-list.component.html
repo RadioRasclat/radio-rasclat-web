@@ -1,6 +1,6 @@
 <div class="col-12" *ngIf="isLoading == false && recordings?.length == 0">
-  <app-text-seperator [text]="'noBroadcastsFound' | translate" [isLink]="false">
-  </app-text-seperator>
+  <app-text-separator [text]="'noBroadcastsFound' | translate" [isLink]="false">
+  </app-text-separator>
 </div>
 
 <div class="recordingList" *ngIf="!isLoading == true">

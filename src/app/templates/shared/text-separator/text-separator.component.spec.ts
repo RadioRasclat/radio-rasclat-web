@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextSeperatorComponent } from './text-seperator.component';
+import { TextSeparatorComponent } from './text-separator.component';
 
-describe('TextSeperatorComponent', () => {
-  let component: TextSeperatorComponent;
-  let fixture: ComponentFixture<TextSeperatorComponent>;
+describe('TextSeparatorComponent', () => {
+  let component: TextSeparatorComponent;
+  let fixture: ComponentFixture<TextSeparatorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TextSeperatorComponent],
+      declarations: [TextSeparatorComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextSeperatorComponent);
+    fixture = TestBed.createComponent(TextSeparatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

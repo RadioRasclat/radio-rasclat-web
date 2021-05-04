@@ -179,12 +179,12 @@
     </div>
   </div>
 
-  <app-text-seperator
+  <app-text-separator
     [text]="('moreFrom' | translate) + ' ' + recording?.show.title + ' >'"
     [isLink]="true"
     [url]="'/shows/' + recording?.show.slug"
   >
-  </app-text-seperator>
+  </app-text-separator>
 
   <app-recordings-gallery
     [recordings]="showRecordings"

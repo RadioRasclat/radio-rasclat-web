@@ -10,7 +10,7 @@ import { TimeagoModule } from 'ngx-timeago';
 import { PlayerComponent } from './player/player.component';
 import { RouterModule } from '@angular/router';
 import { LiveComponent } from './live/live.component';
-import { TextSeperatorComponent } from './text-seperator/text-seperator.component';
+import { TextSeparatorComponent } from './text-separator/text-separator.component';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { DarkModeToggleComponent } from './dark-mode-toggle/dark-mode-toggle.component';
 import { SvgIconsModule } from '@ngneat/svg-icon';
@@ -47,7 +47,7 @@ import { DonationBoxComponent } from './donation-box/donation-box.component';
     MomentPipe,
     PlayerComponent,
     LiveComponent,
-    TextSeperatorComponent,
+    TextSeparatorComponent,
     PageTitleComponent,
     DarkModeToggleComponent,
     PageBannerComponent,
@@ -67,7 +67,7 @@ import { DonationBoxComponent } from './donation-box/donation-box.component';
     TimeagoModule,
     PlayerComponent,
     LiveComponent,
-    TextSeperatorComponent,
+    TextSeparatorComponent,
     PageTitleComponent,
     DarkModeToggleComponent,
     PageBannerComponent,
