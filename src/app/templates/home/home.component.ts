@@ -3,6 +3,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { ApiService } from '@app/core/services/api.service';
 import { finalize } from 'rxjs/operators';
 import moment from 'moment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit {
   isLoading = false;
   today: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private toastService: ToastrService) {}
 
   ngOnInit() {
     this.isLoading = true;
@@ -119,7 +120,22 @@ export class HomeComponent implements OnInit {
                                         } else {
                                           this.nextShow = false;
                                         }
-                                        this.isLoading = false;
+                                        if (
+                                          recordings.status === 0 &&
+                                          showsRecentlyUpdated.status === 0 &&
+                                          projects.status === 0 &&
+                                          blogPosts.status === 0
+                                        ) {
+                                          this.toastService.warning(
+                                            'Error connecting to API or you are offline.',
+                                            'Offline.',
+                                            {
+                                              closeButton: true,
+                                            }
+                                          );
+                                        } else {
+                                          this.isLoading = false;
+                                        }
                                       });
                                   });
                               });
