@@ -10,6 +10,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from '@app/app.module';
 import { environment } from '@env/environment';
 
+// @ts-ignore
+import * as klaroConfig from './assets/js/klaro/config';
+// @ts-ignore
+declare const klaro;
+window['klaroConfig'] = klaroConfig;
+klaro.setup();
+
 if (environment.production) {
   enableProdMode();
 }
