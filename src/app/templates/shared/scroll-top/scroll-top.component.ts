@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ScrollTopComponent implements OnInit {
   windowScrolled: boolean;
-  topPosToStartShowing = 600;
+  topPosToStartShowing = 1000;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
