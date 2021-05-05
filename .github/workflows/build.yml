@@ -31,5 +31,10 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+      - name: E2E
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          headless: true
       - name: Coverage
         uses: codecov/codecov-action@v1
