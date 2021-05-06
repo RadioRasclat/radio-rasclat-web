@@ -66,15 +66,26 @@ export class ApiService {
       );
   }
 
-  getRecordings() {
-    return this.httpClient
-      .get(environment.serverUrl + '/recordings', withCache())
-      .pipe(
-        map((body: any) => body),
-        catchError((err) =>
-          of({ status: err.status, message: err.error.message })
-        )
-      );
+  getRecordings(page?: number) {
+    if (page) {
+      return this.httpClient
+        .get(environment.serverUrl + '/recordings?page=' + page, withCache())
+        .pipe(
+          map((body: any) => body),
+          catchError((err) =>
+            of({ status: err.status, message: err.error.message })
+          )
+        );
+    } else {
+      return this.httpClient
+        .get(environment.serverUrl + '/recordings', withCache())
+        .pipe(
+          map((body: any) => body),
+          catchError((err) =>
+            of({ status: err.status, message: err.error.message })
+          )
+        );
+    }
   }
 
   getRecording({ recordingId }: { recordingId: any }) {
