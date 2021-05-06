@@ -100,6 +100,26 @@
               {{ state?.readableCurrentTime }} — {{ state?.readableDuration }}
             </span>
           </div>
+          <div class="playerVolume" *ngIf="!state?.live">
+            <span class="playerVolumeInner">
+              <span (click)="mute()">
+                <svg-icon key="volume-up" style="margin: 0 auto -13px auto;" *ngIf="!state.muted && state.volume > 0"></svg-icon>
+                <svg-icon key="volume-off" style="margin: 0 auto -13px auto;" *ngIf="state.muted || state.volume == 0"></svg-icon>
+              </span>
+              <input
+                      type="range"
+                      class="volume-slider"
+                      min="0"
+                      max="100"
+                      step="1"
+                      style="margin: 0 auto 13px auto;"
+                      [value]="state?.volume"
+                      (input)="onVolumeSliderChangeEnd($event)"
+                      [disabled]="state?.error"
+                      *ngIf="state.currentTrack.currentSrc != ''"
+              />
+            </span>
+          </div>
           <div class="playerControls playerClose">
             <span (click)="hide()">
               <a>

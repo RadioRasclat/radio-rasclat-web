@@ -116,7 +116,7 @@ export class RecordingsSingleComponent implements OnInit, AfterViewInit {
   }
 
   play() {
-    if (this.state.currentTrack.currentSrc === this.recording.audio) {
+    if (this.state.currentTrack.currentTitle === this.title) {
       this.audioService.play();
     } else {
       this.openFile();

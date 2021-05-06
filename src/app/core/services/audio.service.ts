@@ -35,7 +35,9 @@ export class AudioService {
       currentTitle: '',
       currentUrl: '',
     },
+    volume: 100,
     canplay: false,
+    muted: false,
     hidden: true,
     live: false,
     nextShowName: undefined,
@@ -97,12 +99,23 @@ export class AudioService {
     if (this.state.playing) {
       this.pause();
     }
-    // TODO: restart audiofile when hide
-    // this.resetState();
+    this.resetState();
+  }
+  
+  mute() {
+    this.audioObj.muted = true;
+  }
+  
+  unmute() {
+    this.audioObj.muted = false;
   }
 
   seekTo(seconds: number) {
     this.audioObj.currentTime = seconds;
+  }
+
+  setVolumeTo(precent: number) {
+    this.audioObj.volume = precent / 100;
   }
 
   formatTime(time: number, format: string = 'HH:mm:ss') {
@@ -114,10 +127,15 @@ export class AudioService {
     return this.stateChange.asObservable();
   }
 
+  getCurentAudioSrc() {
+    return this.audioObj.currentSrc;
+  }
+
   private streamObservable(url: string) {
     return new Observable((observer) => {
       // Play audio
       this.audioObj.src = url;
+      this.audioObj.muted = false;
       this.audioObj.load();
       this.audioObj.play();
 
@@ -208,11 +226,13 @@ export class AudioService {
         currentTitle: '',
         currentUrl: '',
       },
+      volume: this.state.volume,
       canplay: false,
+      muted: false,
       hidden: true,
-      live: false,
-      nextShowName: undefined,
-      nextShowStart: undefined,
+      live: this.state.live,
+      nextShowName: this.state.nextShowName,
+      nextShowStart: this.state.nextShowStart,
       error: false,
     };
   }

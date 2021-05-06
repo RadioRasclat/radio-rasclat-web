@@ -10,7 +10,9 @@ export interface StreamState {
     currentTitle: string;
     currentUrl: string;
   };
+  volume: number | undefined;
   canplay: boolean;
+  muted: boolean;
   hidden: boolean;
   live: boolean;
   nextShowName: string | undefined;
