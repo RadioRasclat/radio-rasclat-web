@@ -44,6 +44,7 @@
 
 .recording.placeholder {
   display: none;
+  background: var(--page-background);
 }
 
 .recording__info__container {
@@ -123,6 +124,10 @@
     display: none;
   }
 
+  .recording.placeholder:nth-of-type(3) {
+    display: none;
+  }
+
   .recording.placeholder:before {
     background-color: transparent;
   }
@@ -135,7 +140,15 @@
 
 @media only screen and (min-width: 64rem) {
 
+  .recording.placeholder {
+    display: block;
+  }
+
   .recording.placeholder:nth-of-type(2) {
+    display: block;
+  }
+
+  .recording.placeholder:nth-of-type(3) {
     display: block;
   }
 
