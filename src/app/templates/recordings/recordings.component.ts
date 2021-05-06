@@ -67,13 +67,8 @@ export class RecordingsComponent implements OnInit {
       .getRecordings(page)
       .pipe(finalize(() => {}))
       .subscribe((recordings) => {
-        // @ts-ignore
-        this.pager = {
-          totalPages: recordings.totalPages,
-          currentPage: recordings.page,
-          pages: _.range(1, recordings.totalPages + 1)
-        };
-        this.recordings = recordings.docs;
+        this.pager = recordings.pager;
+        this.recordings = recordings.pageOfItems;
         const newestRecording = _.maxBy(
           this.recordings,
           function (recording: Recording) {
