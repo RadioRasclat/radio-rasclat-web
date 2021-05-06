@@ -106,7 +106,7 @@
                         <svg-icon key="play"></svg-icon>
                       </div> -->
                       <div class="slideshowSlideCaption__textArea">
-                        {{ 'hotThisMonth' | translate }} &mdash;
+                        🔥 {{ 'hotThisMonth' | translate }} &mdash;
                         {{ hotRecording?.viewCounter }} plays:<br />
                         <h4>{{ hotRecording?.title }}</h4>
                       </div>
@@ -158,6 +158,30 @@
                         {{ recording?.timeStart | date: 'dd.MM.yyyy' }} •
                         {{ recording?.timeStart | date: 'HH:mm' }}<br />
                         <h4>{{ recording?.title }}</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide" *ngIf="shuffleRecording">
+            <div
+                class="slideshowSlide"
+                [defaultImage]="defaultImage"
+                [lazyLoad]="shuffleRecording?.image"
+            >
+              <a routerLink="/broadcasts/{{ shuffleRecording?.slug }}">
+                <div class="slideshowSlideInner">
+                  <div class="slideshowSlideCaptionWrapper">
+                    <div class="slideshowSlideCaption">
+                      <!-- <div class="slideshowSlideCaption__playArea">
+                        <svg-icon key="play"></svg-icon>
+                      </div> -->
+                      <div class="slideshowSlideCaption__textArea">
+                        🎲 Shuffle —
+                        {{ shuffleRecording?.timeStart | timeago }}:<br />
+                        <h4>{{ shuffleRecording?.title }}</h4>
                       </div>
                     </div>
                   </div>
