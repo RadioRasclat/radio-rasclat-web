@@ -5,6 +5,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import { Recording } from '@app/core/models/Recording';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recordings',
@@ -33,34 +34,12 @@ export class RecordingsComponent implements OnInit {
     min: 0,
     max: 0,
   };
+  pager: any;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.isLoading = true;
-    this.apiService
-      .getRecordings()
-      .pipe(finalize(() => {}))
-      .subscribe((recordings: Recording[]) => {
-        this.recordings = recordings;
-        const newestRecording = _.maxBy(
-          this.recordings,
-          function (recording: Recording) {
-            return recording.timeStart;
-          }
-        );
-
-        const oldestRecording = _.minBy(
-          this.recordings,
-          function (recording: Recording) {
-            return recording.timeStart;
-          }
-        );
-        this.years.max = moment(newestRecording.timeStart, 'YYYY-MM-DD').year();
-        this.years.min = moment(oldestRecording.timeStart, 'YYYY-MM-DD').year();
-        // turn off loading state
-        this.isLoading = false;
-      });
+    this.route.queryParams.subscribe(x => this.getRecordings(x.page || 1));
   }
 
   getRecordingsByDate(year: number, month: number): Recording[] {
@@ -80,5 +59,33 @@ export class RecordingsComponent implements OnInit {
       items.push(i);
     }
     return items;
+  }
+
+  private getRecordings(page: number) {
+    this.isLoading = true;
+    this.apiService
+      .getRecordings(page)
+      .pipe(finalize(() => {}))
+      .subscribe((recordings) => {
+        this.pager = recordings.pager;
+        this.recordings = recordings.pageOfItems;
+        const newestRecording = _.maxBy(
+          this.recordings,
+          function (recording: Recording) {
+            return recording.timeStart;
+          }
+        );
+
+        const oldestRecording = _.minBy(
+          this.recordings,
+          function (recording: Recording) {
+            return recording.timeStart;
+          }
+        );
+        this.years.max = moment(newestRecording.timeStart, 'YYYY-MM-DD').year();
+        this.years.min = moment(oldestRecording.timeStart, 'YYYY-MM-DD').year();
+        // turn off loading state
+        this.isLoading = false;
+      });
   }
 }
