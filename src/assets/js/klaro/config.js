@@ -20,9 +20,9 @@ let klaroConfig = {
         en: {
             privacyPolicyUrl: '/privacy',
             consentModal: {
-                title: '<u>Radio Rasclat Cookie Settings</u>',
+                title: '🍪 Cookie Settings',
                 description:
-                    'Here you can see and customize the information that we collect about you.',
+                    'Radio Rasclat uses cookies to improve your user experience and for advertising purposes. Below you have the opportunity to review and manage your cookie settings for privacy purposes.',
             },
             googleAnalytics: {
                 description: 'Web and user analytics hosted by Google.',
