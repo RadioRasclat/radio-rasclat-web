@@ -1,6 +1,10 @@
 .projectsSlideshow {
   border-bottom: 1px solid var(--card-border);
   padding: 2rem 0;
+
+  .swiper-container {
+    overflow: visible;
+  }
 }
 
 .swiper-slide .projectSlide {
