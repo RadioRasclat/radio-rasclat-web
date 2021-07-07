@@ -30,10 +30,17 @@
               "src/manifest.json",
               "src/OneSignalSDKUpdaterWorker.js",
               "src/OneSignalSDKWorker.js",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/klaro/dist/",
+                "output": "./assets/js/klaro/"
+              }
             ],
             "styles": ["src/main.scss"],
-            "scripts": ["./node_modules/node-vibrant/dist/vibrant.min.js"]
+            "scripts": [
+              "./node_modules/node-vibrant/dist/vibrant.min.js"
+            ]
           },
           "configurations": {
             "production": {

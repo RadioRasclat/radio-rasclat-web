@@ -4,6 +4,7 @@ import { ModalService } from '@app/core/services/modal.service';
 import { I18nService } from '@app/core';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
+declare var klaro: any;
 
 @Component({
   selector: 'app-header',
@@ -59,5 +60,9 @@ export class HeaderComponent implements OnInit {
 
   closeModal(id: string) {
     this.modalService.close(id);
+  }
+
+  openCookieManager() {
+    klaro.show();
   }
 }

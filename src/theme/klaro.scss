@@ -1,0 +1,129 @@
+.klaro {
+  font-size: inherit;
+}
+
+.klaro .cookie-modal .cm-bg {
+  background: rgba(0, 0, 0, .75);
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) {
+  border-radius: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+  background-color: var(--card-light-background);
+
+  .cn-body {
+    padding: 2rem;
+  }
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
+  padding: 2rem;
+  box-shadow: 0 -2px 20px rgb(0 0 0 / 10%);
+  border-top: 1px solid var(--card-border);
+}
+
+.klaro .cookie-modal p,
+.klaro .cookie-modal strong,
+.klaro .cookie-modal ul,
+.klaro .cookie-modal li,
+.klaro .context-notice p,
+.klaro .context-notice strong,
+.klaro .context-notice ul,
+.klaro .context-notice li,
+.klaro .cookie-notice p,
+.klaro .cookie-notice strong,
+.klaro .cookie-notice ul,
+.klaro .cookie-notice li {
+  color: var(--text-color);
+}
+
+.klaro .cookie-modal h1,
+.klaro .cookie-modal h2,
+.klaro .context-notice h1,
+.klaro .context-notice h2,
+.klaro .cookie-notice h1,
+.klaro .cookie-notice h2 {
+  color: var(--secondary-color);
+}
+
+.klaro .cookie-modal a,
+.klaro .context-notice a,
+.klaro .cookie-notice a {
+  color: var(--secondary-color);
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-success,
+.klaro .context-notice .cm-btn.cm-btn-success,
+.klaro .cookie-notice .cm-btn.cm-btn-success {
+  padding: .6rem 1.5rem .5rem;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  font-family: "Trash Medium", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-success,
+.klaro .context-notice .cm-btn.cm-btn-success,
+.klaro .cookie-notice .cm-btn.cm-btn-success {
+  color: var(--secondary-color);
+  background: var(--secondary-color-light);
+}
+
+.klaro .cookie-modal .cm-btn,
+.klaro .context-notice .cm-btn,
+.klaro .cookie-notice .cm-btn {
+  padding: .6rem 1.5rem .5rem;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  font-family: "Trash Medium", sans-serif;
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--primary-color);
+  background: var(--primary-color-light);
+}
+
+.klaro .cm-btn:hover {
+  text-decoration: underline;
+}
+
+.klaro .cookie-modal .cm-modal .cm-header {
+  border-bottom-color: var(--card-border);
+  padding: 2rem;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    display: block;
+    font-family: "Trash Medium", serif;
+  }
+}
+
+.klaro .cookie-modal .cm-modal .cm-body {
+  padding: 2rem;
+
+  ul.cm-purposes li.cm-purpose.cm-toggle-all {
+    border-top-color: var(--card-border);
+  }
+}
+
+.klaro .cookie-modal .cm-modal .cm-footer {
+  border-top-color: var(--card-border);
+  padding: 2rem;
+}
+
+.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider, .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
+.klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
+  background-color: var(--secondary-color);
+}
+
+.klaro .cm-caret {
+  font-size: 14px;
+  margin-top: .3rem;
+}

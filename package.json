@@ -49,6 +49,7 @@
     "flashgrid": "^1.1.1",
     "instantsearch.css": "^7.4.5",
     "instantsearch.js": "^3.7.0",
+    "klaro": "^0.7.18",
     "medium-zoom": "^1.0.6",
     "moment": "^2.29.1",
     "ng-lazyload-image": "^9.1.0",
