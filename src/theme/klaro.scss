@@ -19,13 +19,9 @@
 
   .cn-body {
     padding: 2rem;
+    box-shadow: 0 -2px 20px rgb(0 0 0 / 10%);
+    border-top: 1px solid var(--card-border);
   }
-}
-
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
-  padding: 2rem;
-  box-shadow: 0 -2px 20px rgb(0 0 0 / 10%);
-  border-top: 1px solid var(--card-border);
 }
 
 .klaro .cookie-modal p,
@@ -67,11 +63,6 @@
   font-family: "Trash Medium", sans-serif;
   display: inline-block;
   white-space: nowrap;
-}
-
-.klaro .cookie-modal .cm-btn.cm-btn-success,
-.klaro .context-notice .cm-btn.cm-btn-success,
-.klaro .cookie-notice .cm-btn.cm-btn-success {
   color: var(--secondary-color);
   background: var(--secondary-color-light);
 }
@@ -118,7 +109,8 @@
   padding: 2rem;
 }
 
-.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider, .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
+.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider,
+.klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
   background-color: var(--secondary-color);
 }
