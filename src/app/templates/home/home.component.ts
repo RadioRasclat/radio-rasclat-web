@@ -4,6 +4,8 @@ import { ApiService } from '@app/core/services/api.service';
 import { finalize } from 'rxjs/operators';
 import moment from 'moment';
 import { ToastrService } from 'ngx-toastr';
+import { Recording } from '@app/core/models/Recording';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-home',
@@ -19,8 +21,9 @@ export class HomeComponent implements OnInit {
 
   recordings = '';
   shows = '';
-  hotRecordings: any = [];
-  hotRecording: any = [];
+  shuffleRecording: Recording;
+  hotRecordings: Recording[];
+  hotRecording: Recording;
   schedule: any;
   isLoading = false;
   today: any;
@@ -37,6 +40,7 @@ export class HomeComponent implements OnInit {
           recordings.timeStart
         ).toLocaleDateString();
         this.recordings = recordings;
+        this.shuffleRecording = _.sample(recordings);
         this.apiService
           .getHotRecording()
           .pipe(finalize(() => {}))

@@ -13,7 +13,7 @@ const routes: Routes = [
       data: { title: 'Radio Rasclat — Events' },
     },
     {
-      path: 'events/event/:id',
+      path: 'events/:id',
       component: ProjectsSingleComponent,
     },
   ]),

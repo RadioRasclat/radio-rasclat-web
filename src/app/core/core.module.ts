@@ -8,8 +8,6 @@ import {
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouteReusableStrategy } from './route-reusable-strategy';
-import { AuthenticationService } from './authentication/authentication.service';
-import { CredentialsService } from './authentication/credentials.service';
 import { I18nService } from './services/i18n.service';
 import { HttpService } from './http/http.service';
 import { HttpCacheService } from './http/http-cache.service';
@@ -21,8 +19,6 @@ import { NotFoundInterceptor } from './http/not-found.interceptor';
 @NgModule({
   imports: [CommonModule, HttpClientModule, TranslateModule, RouterModule],
   providers: [
-    AuthenticationService,
-    CredentialsService,
     I18nService,
     HttpCacheService,
     ApiPrefixInterceptor,

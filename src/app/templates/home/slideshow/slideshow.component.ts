@@ -5,6 +5,7 @@ import { ApiService } from '@app/core/services/api.service';
 import { finalize } from 'rxjs/operators';
 import moment from 'moment';
 import { StreamState } from '@app/core/interfaces/stream-state';
+import { Recording } from '@app/core/models/Recording';
 
 @Component({
   selector: 'app-slideshow',
@@ -15,7 +16,8 @@ export class SlideshowComponent implements OnInit {
   @Input() blogPosts = '';
   @Input() recordings = '';
   @Input() projects = '';
-  @Input() hotRecording = '';
+  @Input() shuffleRecording: Recording;
+  @Input() hotRecording: Recording;
   @Input() live = '';
   @Input() nextUp = '';
   @Input() isLoading = false;

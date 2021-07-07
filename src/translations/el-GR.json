@@ -1,5 +1,5 @@
 {
-	"April": "April",
+	"April": "Απριλίου",
 	"August": "August",
 	"December": "December",
 	"February": "February",
@@ -35,6 +35,7 @@
 	"donate": "Donate",
 	"donateText": "Radio Rasclat is open-source and ad-free! Please consider donating.",
 	"download": "Download",
+	"email": "E-Mail",
 	"environmentalProtection": "Environmental protection",
 	"events": "Events",
 	"fromOurBlog": "From Our Blog",
@@ -44,6 +45,7 @@
 	"imprint": "Imprint",
 	"infoBannerText": "Radio Rasclat is a non-commercial and <a class=\"underline\" href=\"https://github.com/RadioRasclat\" target=\"_blank\">open source</a> community radio station.",
 	"internal": "Internal",
+	"internet": "Internet",
 	"iosApp": "iOS-App",
 	"languageSettings": "Language Settings",
 	"listen": "Listen",

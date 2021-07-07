@@ -1,0 +1,11 @@
+<div class="scroll-to-top" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+  <a
+    type="button"
+    class="btn scrollTop"
+    data-toggle="button"
+    aria-pressed="true"
+    (click)="scrollToTop()"
+  >
+    <svg-icon key="arrowUp"></svg-icon>
+  </a>
+</div>

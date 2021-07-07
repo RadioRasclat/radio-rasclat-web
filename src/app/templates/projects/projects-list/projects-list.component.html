@@ -17,7 +17,7 @@
         <div class="projectsEntry__wrapper">
           <div class="projectsEntry__header">
             <div class="projectsEntry__image__container">
-              <a routerLink="/events/event/{{ project?.slug }}">
+              <a routerLink="/events/{{ project?.slug }}">
                 <figure class="projectsListBanner">
                   <img
                     [defaultImage]="defaultImage"
@@ -35,7 +35,7 @@
                 {{ project?.timeStart | timeago }}
               </div>
               <div class="projectsEntry__title">
-                <a routerLink="/events/event/{{ project?.slug }}">
+                <a routerLink="/events/{{ project?.slug }}">
                   <h3>{{ project?.title }}</h3>
                 </a>
               </div>
@@ -52,7 +52,7 @@
             <div class="projectsEntry__readMore">
               <a
                 class="btn btn-secondary"
-                routerLink="/events/event/{{ project?.slug }}"
+                routerLink="/events/{{ project?.slug }}"
                 >{{ 'readMore' | translate }} ></a
               >
             </div>

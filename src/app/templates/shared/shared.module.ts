@@ -26,6 +26,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { FooterComponent } from './footer/footer.component';
 import { ModalModule } from '@app/templates/shared/modal';
 import { DonationBoxComponent } from './donation-box/donation-box.component';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import { DonationBoxComponent } from './donation-box/donation-box.component';
     ScriptHackComponent,
     FooterComponent,
     DonationBoxComponent,
+    ScrollTopComponent,
   ],
   exports: [
     LoaderComponent,
@@ -76,6 +78,7 @@ import { DonationBoxComponent } from './donation-box/donation-box.component';
     LanguageSelectComponent,
     ScriptHackComponent,
     FooterComponent,
+    ScrollTopComponent,
   ],
   providers: [ApiService],
 })
