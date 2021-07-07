@@ -1,4 +1,28 @@
-# Changelog
+# Changelog: `Radio Rasclat Web`
+
+## [4.3.0] - 2021-05-18
+
+### New
+
+- Error Interceptor: The application is now intercepting errors from the backend and will redirect the user to 404 pages if necessary.
+- Notifications: Based on the error codes, the application will now tell you what's wrong within shiny notifications.
+- A new 404 not found page.
+- Donorbox gives us the possibility to donate easily via PayPal and credit card.
+- Shuffle: Display a random (old) recording in the slideshow.
+- The new scroll-to-top button makes it easier for you to get back to the top of the page.
+- On the recordings page there is now a pagination because the browser, with now more than 200 entries, took quite a lot of computing power.
+
+### Changes
+
+- The `separator` component had a typo. This has been changed.
+- Dropcap letters on blog and event entries.
+- The artists page has now a shiny skeleton loading indicator too.
+- The events URL has been changed to `/events/`.
+- Updated translations.
+
+### Bug-Fixes
+
+- Body-Scroll-Lock: While there are any open modals, the body scroll has been disabled.
 
 ## [4.2.1] - 2021-05-02
 
@@ -158,6 +182,7 @@ We present Radio Rasclat Web in version four. The entire application has been en
 
 - Responsive UI issues.
 
+[4.3.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.3.0
 [4.2.1]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.1
 [4.2.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.2.0
 [4.1.0]: https://github.com/RadioRasclat/radio-rasclat-web/releases/tag/4.1.0

@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": "./",
     "resolveJsonModule": true,
     "downlevelIteration": true,
@@ -23,5 +24,4 @@
     },
     "typeRoots": ["node_modules/@types"]
   },
-  "allowJs": true
 }

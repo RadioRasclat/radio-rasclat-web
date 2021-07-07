@@ -2,7 +2,7 @@
   <div class="swiper-container" [swiper]="config">
     <div class="swiper-wrapper">
       <div class="swiper-slide" *ngFor="let project of projects">
-        <a routerLink="/events/event/{{ project?.slug }}">
+        <a routerLink="/events/{{ project?.slug }}">
           <div
             class="projectSlide"
             [defaultImage]="defaultImage"
@@ -13,7 +13,7 @@
           <div class="projectSlideCaption">
             <div class="projectSlideCaption__textArea">
               {{ project?.timeStart | date: 'dd.MM.yyyy' }}<br />
-              <a routerLink="/events/event/{{ project?.slug }}">
+              <a routerLink="/events/{{ project?.slug }}">
                 {{ project?.title }} <span style="color: #6157f7">»</span>
               </a>
             </div>
