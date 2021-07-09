@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
-  selector: 'app-top-banner',
-  templateUrl: './top-banner.component.html',
-  styleUrls: ['./top-banner.component.scss'],
+  selector: 'app-announcement-banner',
+  templateUrl: './announcement-banner.component.html',
+  styleUrls: ['./announcement-banner.component.scss'],
 })
-export class TopBannerComponent {
+export class AnnouncementBannerComponent {
   bannerVisible: Boolean;
 
   constructor(private cookieService: CookieService) {
