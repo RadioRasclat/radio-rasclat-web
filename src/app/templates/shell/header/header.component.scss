@@ -236,26 +236,3 @@ nav.navVisible {
 .languagePicker__item.language a:hover {
   text-decoration: underline;
 }
-
-.statusCircle {
-  background: var(--text-color-light);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-left: 1px;
-  top: -1px;
-  position: relative;
-
-  &.green {
-    background: #3bd671;
-  }
-
-  &.yellow {
-    background: #f29030;
-  }
-
-  &.red {
-    background: #df484a;
-  }
-}

@@ -43,26 +43,14 @@
               </a>
             </li>
             <li>
-              <a (click)="openParticipateDialog()">
+              <a href="https://form.typeform.com/to/zGcjEhGb" target="_blank" rel="noopener noreferrer">
                 {{ 'participate' | translate }}
               </a>
             </li>
             <li>
-              <a (click)="openModal('donationBox')">
+              <a href="https://donorbox.org/radio-rasclat" target="_blank" rel="noopener noreferrer">
                 {{ 'donate' | translate }}
               </a>
-              <modal id="donationBox">
-                <h1>{{ 'donate' | translate }}</h1>
-                <hr />
-                <app-donation-box></app-donation-box>
-                <hr />
-                <a
-                    class="btn btn-secondary"
-                    (click)="closeModal('donationBox')"
-                >
-                  {{ 'close' | translate }}
-                </a>
-              </modal>
             </li>
           </ul>
         </div>
@@ -113,6 +101,15 @@
                 rel="noopener noreferrer"
               >
                 {{ 'status' | translate }}
+                <span
+                    class="statusCircle"
+                    [ngClass]="{
+                    green: status === 2,
+                    yellow: status === 1,
+                    red: status === 0
+                  }"
+                >
+                </span>
               </a>
             </li>
           </ul>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { ModalService } from '@app/core/services/modal.service';
 
 @Component({
   selector: 'app-top-banner',
@@ -10,10 +9,7 @@ import { ModalService } from '@app/core/services/modal.service';
 export class TopBannerComponent {
   bannerVisible: Boolean;
 
-  constructor(
-    private cookieService: CookieService,
-    private modalService: ModalService
-  ) {
+  constructor(private cookieService: CookieService) {
     if (this.cookieService.check('banner')) {
       if (this.cookieService.get('banner') === 'hidden') {
         this.bannerVisible = false;
@@ -31,13 +27,5 @@ export class TopBannerComponent {
   hideBanner() {
     this.cookieService.set('banner', 'hidden', 7);
     this.bannerVisible = false;
-  }
-
-  openModal(id: string) {
-    this.modalService.open(id);
-  }
-
-  closeModal(id: string) {
-    this.modalService.close(id);
   }
 }

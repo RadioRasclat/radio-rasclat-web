@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   isNavVisible = false;
   isLanguagePickerVisible = false;
   now: number;
-  status: any;
   isLoading = false;
 
   constructor(
@@ -41,18 +40,7 @@ export class HeaderComponent implements OnInit {
     this.isLanguagePickerVisible = !this.isLanguagePickerVisible;
   }
 
-  ngOnInit() {
-    this.apiService
-      .getStatus()
-      .pipe(
-        finalize(() => {
-          this.isLoading = false;
-        })
-      )
-      .subscribe((status) => {
-        this.status = status.status;
-      });
-  }
+  ngOnInit() {}
 
   openModal(id: string) {
     this.modalService.open(id);

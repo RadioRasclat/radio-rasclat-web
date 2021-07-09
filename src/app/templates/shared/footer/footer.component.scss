@@ -1,10 +1,3 @@
-::ng-deep {
-
-  .typeform-iframe-wrapper {
-    width: 90% !important;
-  }
-}
-
 footer {
   background: var(--card-background);
   border-top: 1px solid var(--card-border);
@@ -72,16 +65,32 @@ footer {
       margin: 0;
     }
   }
+
+  .statusCircle {
+    background: var(--text-color-light);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1px;
+    top: -2px;
+    position: relative;
+
+    &.green {
+      background: #3bd671;
+    }
+
+    &.yellow {
+      background: #f29030;
+    }
+
+    &.red {
+      background: #df484a;
+    }
+  }
 }
 
 @media only screen and (min-width: 48rem) {
-
-  ::ng-deep {
-
-    .typeform-iframe-wrapper {
-      width: 700px !important;
-    }
-  }
 
   .footer__wrapper {
     padding: 5rem 0;
