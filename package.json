@@ -39,7 +39,6 @@
     "@sentry/browser": "^5.30.0",
     "@sentry/cli": "^1.64.0",
     "@sentry/integrations": "^5.30.0",
-    "@typeform/embed": "^1.2.1",
     "@types/algoliasearch-helper": "^2.26.1",
     "algoliasearch": "^3.35.1",
     "angular-instantsearch": "^3.0.0-beta.5",

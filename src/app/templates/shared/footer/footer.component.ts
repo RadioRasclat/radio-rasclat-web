@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
 import { Blog } from '@app/core/models/Blog';
-import * as typeformEmbed from '@typeform/embed';
-import { ModalService } from '@app/core/services/modal.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,32 +12,31 @@ export class FooterComponent implements OnInit {
   blogPosts: Blog[];
   year: number = new Date().getFullYear();
   isLoading: boolean;
+  status: any;
 
-  constructor(private apiService: ApiService, private modalService: ModalService) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.isLoading = true;
     this.apiService
-      .getBlogPosts()
+      .getStatus()
       .pipe(
         finalize(() => {
           this.isLoading = false;
         })
       )
-      .subscribe((blogPosts) => {
-        this.blogPosts = blogPosts;
+      .subscribe((status) => {
+        this.status = status.status;
+        this.apiService
+          .getBlogPosts()
+          .pipe(
+            finalize(() => {
+              this.isLoading = false;
+            })
+          )
+          .subscribe((blogPosts) => {
+            this.blogPosts = blogPosts;
+          });
       });
-  }
-
-  openParticipateDialog() {
-    typeformEmbed.createSlider('zGcjEhGb').open();
-  }
-
-  openModal(id: string) {
-    this.modalService.open(id);
-  }
-
-  closeModal(id: string) {
-    this.modalService.close(id);
   }
 }
