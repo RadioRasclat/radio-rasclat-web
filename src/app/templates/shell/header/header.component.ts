@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalService } from '@app/core/services/modal.service';
 import { I18nService } from '@app/core';
-import { finalize } from 'rxjs/operators';
 import { ApiService } from '@app/core/services/api.service';
+import { NgxTippyProps } from 'ngx-tippy-wrapper';
 declare var klaro: any;
 
 @Component({
@@ -16,6 +16,15 @@ export class HeaderComponent implements OnInit {
   isLanguagePickerVisible = false;
   now: number;
   isLoading = false;
+
+  tippyProps: NgxTippyProps = {
+    trigger: 'click',
+    allowHTML: true,
+    theme: 'light',
+    animation: 'scale-subtle',
+    interactive: true,
+    placement: 'bottom'
+  };
 
   constructor(
     private router: Router,
