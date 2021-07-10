@@ -325,3 +325,10 @@ svg-icon {
 .toast-info {
   background-color: var(--secondary-color);
 }
+
+/* tippy */
+
+.tippy-box[data-theme~=light] {
+  background-color: var(--page-background);
+  color: var(--text-color);
+}
