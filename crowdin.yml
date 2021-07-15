@@ -1,3 +1,0 @@
-files:
-  - source: /src/translations/template.json
-    translation: /src/translations/%locale%.json
