@@ -1,0 +1,162 @@
+import Colors from './assets/colors.svg';
+import StackAlt from './assets/stackalt.svg';
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .link-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .link-item img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+`}</style>
+
+# React Components
+
+We have published development guides on how to build React components with the latest technologies.
+[Storybook](https://storybook.js.org/) is used to show examples in these articles. The source code is located at [here](https://github.com/JenniferFuBook/react-components).
+
+<div className="subheading">Related Articles</div>
+
+<div className="link-list">
+  <a
+    className="link-item"
+    href="https://medium.com/better-programming/build-advanced-react-input-fields-using-styled-components-and-storybook-js-a231b9b2438#e765-bf98276875df"
+    target="_blank"
+  >
+    <img src={StackAlt} alt="Icon" />
+    <span>
+      <strong>Advanced React Input Fields</strong>
+      Build Advanced React Input Fields Using Styled Components and Storybook.js
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://medium.com/better-programming/construct-d3-charts-in-react-cfecc2848ae2"
+    target="_blank"
+  >
+    <img src={StackAlt} alt="Icon" />
+    <span>
+      <strong>Charts</strong>
+      Constructing D3 Charts in React
+    </span>
+  </a>
+    <a
+    className="link-item"
+    href="https://medium.com/better-programming/build-react-tabs-using-recoil-styled-components-and-storybook-js-4ad534cef007"
+    target="_blank"
+  >
+    <img src={StackAlt} alt="Icon" />
+    <span>
+      <strong>Tabs</strong>
+      Build React Tabs Using Recoil, Styled Components, and Storybook.js
+    </span>
+  </a>
+</div>
+
+<div className="subheading">Other Articles</div>
+<div className="link-list">
+  <a
+    className="link-item"
+    href="https://jenniferfubook.medium.com/jennifer-fus-web-development-publications-1a887e4454af"
+    target="_blank"
+  >
+    <img src={Colors} alt="Icon" />
+    <span>
+      <strong>Jennifer Fu’s Web Development Publications</strong>
+    </span>
+  </a>
+</div>
