@@ -1,15 +1,16 @@
 import Box from './components/Box/Box';
+import Container from './components/Container/Container';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <Box
-        p={3}
-        mb={[ 4, 5 ]}
-        color="background"
-        bg="primary">
-        Cookies!
-      </Box>
+      <Header/>
+      <Container>
+        <Box>
+          Cookies!
+        </Box>
+      </Container>
     </div>
   );
 }
