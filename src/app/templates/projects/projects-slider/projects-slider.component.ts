@@ -35,7 +35,7 @@ export class ProjectsSliderComponent implements OnInit {
     },
     spaceBetween: 30,
     observer: true,
-    freeMode: false,
+    freeMode: false
   };
 
   constructor() {}
