@@ -41,6 +41,15 @@ const SearchWrapper = styled.div`
   position: relative;
 `
 
+const Input = styled.input`
+`
+
+const Navigation = styled.div`
+`
+
+const Link = styled.a`
+`
+
 function Header() {
   return (
     <Nav>
@@ -49,21 +58,28 @@ function Header() {
           <Logo />
 
           <SearchWrapper>
-            Test
+            <Input></Input>
           </SearchWrapper>
 
-          <Tippy
-            content={<span>Tooltip</span>}
-            trigger="click"
-            theme="light"
-            allowHTML="true"
-            animation="scale-subtle"
-            interactive="true"
-          >
-            <button>My button</button>
-          </Tippy>
+          <Navigation>
+            <Link>Broadcasts</Link>
+            <Link>Shows</Link>
+            <Link>Schedule</Link>
+            <Tippy
+              allowHTML={true}
+              animation="scale-subtle"
+              appendTo={document.body}
+              content={<span>Tooltip</span>}
+              interactive={true}
+              theme="light"
+              trigger="click"
+            >
+              <button>More ></button>
+            </Tippy>
+          </Navigation>
 
           <div class="buttonStack">
+            <button>Listen</button>
             <button>Listen</button>
           </div>
 
