@@ -1,4 +1,3 @@
-import Box from './components/Box/Box';
 import Container from './components/Container/Container';
 import Header from './components/Header/Header';
 import Marquee from "react-fast-marquee";
