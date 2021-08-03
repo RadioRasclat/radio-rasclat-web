@@ -78,7 +78,7 @@
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^14.17.5",
     "codelyzer": "^6.0.2",
-    "hads": "^2.1.0",
+    "hads": "^3.0.0",
     "htmlhint": "^0.14.2",
     "https-proxy-agent": "^5.0.0",
     "jasmine-core": "~3.5.0",
