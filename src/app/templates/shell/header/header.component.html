@@ -63,10 +63,17 @@
                 </div>
               </a>
               <div #tippyTemplate>
-                <h4>Caption</h4>
-                <p>Some content</p>
-                <button>Action</button>
-                ...
+                <div class="navigationDropdownWrapper">
+                  <div class="navigationDropdownWrapper__inner">
+                    <a routerLink="/artists">
+                      {{ 'artists' | translate }}
+                    </a>
+                    <a routerLink="/artists">
+                      {{ 'chat' | translate }}
+                      <svg-icon key="external"></svg-icon>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -112,7 +119,7 @@
   </div>
 </header>
 
-<header>
+<!--<header>
   <div class="container">
     <div class="grid grid-gap-xs">
       <div class="col-5">
@@ -292,7 +299,7 @@
               >
                 {{ 'participate' | translate }}
               </a>
-            </li> -->
+            </li>
           </ul>
         </div>
         <div class="col-6 col-3@md">
@@ -403,4 +410,4 @@
       </div>
     </div>
   </div>
-</nav>
+</nav> -->

@@ -332,3 +332,9 @@ svg-icon {
   background-color: var(--page-background);
   color: var(--text-color);
 }
+
+.tippy-content {
+  position: relative;
+  padding: .5rem 0;
+  z-index: 1;
+}

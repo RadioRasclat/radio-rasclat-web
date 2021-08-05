@@ -11,12 +11,9 @@ header {
   backdrop-filter: blur(20px);
 
   .headerWrapper {
-    margin: 0;
     display: flex;
     flex-basis: auto;
     flex-shrink: 0;
-    min-height: 0;
-    min-width: 0;
     max-width: 100%;
     flex-direction: row;
     -webkit-box-align: center;
@@ -33,15 +30,11 @@ header {
     }
 
     .searchForm {
-      margin: 0;
-      padding: 0;
       -webkit-box-align: stretch;
       align-items: stretch;
       display: flex;
       flex: 1 0 auto;
       flex-direction: column;
-      min-height: 0;
-      min-width: 0;
       max-width: 100%;
       -webkit-box-flex: 1;
 
@@ -63,26 +56,12 @@ header {
           padding: 0 8px 0 16px;
           border-radius: 24px;
           transition: all .12s ease-in-out 0s;
-          margin: 0;
           display: flex;
-          flex-basis: auto;
-          flex-shrink: 0;
-          min-height: 0;
-          min-width: 0;
-          max-width: 100%;
 
           .searchForm__form__iconContainer {
-            margin: 0;
-            padding: 0;
-            border-width: 0;
-            border-style: solid;
-            border-color: rgb(4, 4, 5);
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            min-height: 0;
-            min-width: 0;
-            max-width: 100%;
             flex-basis: 20px;
             -webkit-box-align: center;
             align-items: center;
@@ -96,32 +75,24 @@ header {
 
           .searchForm__form__input {
             margin: 0 0 0 8px;
-            padding: 0;
             -webkit-box-align: stretch;
             align-items: stretch;
-            border-width: 0;
-            border-style: solid;
-            border-color: rgb(4, 4, 5);
             display: flex;
             flex: 1 0 auto;
             flex-direction: column;
-            min-height: 0;
-            min-width: 0;
-            max-width: 100%;
             -webkit-box-flex: 1;
             -webkit-box-pack: center;
             justify-content: center;
 
             input {
               background: transparent;
-              border-width: 0;
-              padding: 0;
               color: var(--text-color);
               font-weight: 500;
               font-family: inherit;
               overflow: hidden;
               outline: none;
               width: 100%;
+              border-width: 0;
             }
 
             ::placeholder {
@@ -134,13 +105,8 @@ header {
     }
 
     .navigation {
-      margin: 0;
-      padding: 0;
       display: flex;
       flex: 0 0 auto;
-      min-height: 0;
-      min-width: 0;
-      max-width: 100%;
       flex-direction: row;
       -webkit-box-align: center;
       align-items: center;
@@ -149,39 +115,26 @@ header {
       justify-content: center;
 
       .navigationSection {
-        margin: 0;
-        padding: 0;
         -webkit-box-align: stretch;
         align-items: stretch;
         display: flex;
         flex-basis: auto;
         flex-shrink: 0;
-        min-height: 0;
-        min-width: 0;
-        max-width: 100%;
         flex-direction: row;
 
         .navigationItem {
           margin: 0 1rem 0 0;
-          padding: 0;
           -webkit-box-align: stretch;
           align-items: stretch;
           display: flex;
           flex-basis: auto;
           flex-direction: column;
           flex-shrink: 0;
-          min-height: 0;
-          min-width: 0;
-          max-width: 100%;
 
           .navigationItemLink {
-            margin: 0;
-            padding: 0;
             display: flex;
             flex-basis: auto;
             flex-shrink: 0;
-            min-height: 0;
-            min-width: 0;
             max-width: 100%;
             -webkit-box-align: center;
             align-items: center;
@@ -199,30 +152,63 @@ header {
 
             .navigationItemBadge {
               margin: 0 0 0 8px;
-              padding: 0;
               -webkit-box-align: stretch;
               align-items: stretch;
               display: flex;
               flex-basis: auto;
               flex-direction: column;
               flex-shrink: 0;
-              min-height: 0;
-              min-width: 0;
-              max-width: 100%;
             }
 
             .navigationItemDropdownIndicator {
               margin: 0 0 0 8px;
-              padding: 0;
               -webkit-box-align: stretch;
               align-items: stretch;
               display: flex;
               flex-basis: auto;
               flex-direction: column;
               flex-shrink: 0;
-              min-height: 0;
-              min-width: 0;
-              max-width: 100%;
+            }
+          }
+
+          .navigationDropdownWrapper {
+            display: flex;
+            flex-direction: column;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            width: 250px;
+
+            .navigationDropdownWrapper__inner {
+              position: relative;
+
+              a {
+                height: auto;
+                display: flex;
+                text-align: left;
+                font-family: "Circular Book",
+                  "Neue Haas Grotesk Text",
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  Oxygen,
+                  Ubuntu,
+                  Cantarell,
+                  "Open Sans",
+                  "Helvetica Neue",
+                  sans-serif;
+                font-weight: bold;
+                font-size: 16px;
+                padding: .5rem .5rem;
+                margin: 0 .5rem;
+                transition: var(--transition-time);
+                border-radius: 5px;
+              }
+
+              a:hover {
+                background: var(--card-background-hover);
+                color: var(--text-color);
+              }
             }
           }
         }
