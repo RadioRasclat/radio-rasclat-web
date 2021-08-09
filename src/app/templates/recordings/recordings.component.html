@@ -36,21 +36,37 @@
     <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
       <!--
       <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item first-item">
-        <a routerLink="/broadcasts" [queryParams]="{ page: 1 }" class="page-link">«</a>
+        <a routerLink="/broadcasts" [queryParams]="{ page: 1 }" class="page-link">&laquo;</a>
+      </li>
+      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item previous-item">
+        <a routerLink="/broadcasts" [queryParams]="{ page: pager.currentPage - 1 }" class="page-link">&lsaquo;</a>
       </li>
       -->
-      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item previous-item">
-        <a routerLink="/broadcasts" [queryParams]="{ page: pager.currentPage - 1 }" class="page-link">«</a>
+
+      <li *ngIf="!pager.pages.includes(1)" class="page-item">
+        <a routerLink="/broadcasts" [queryParams]="{ page: 1 }" class="page-link">1</a>
       </li>
+      <li *ngIf="!pager.pages.includes(1)" class="page-item disabled">
+        ...
+      </li>
+
       <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item number-item">
         <a routerLink="/broadcasts" [queryParams]="{ page: page }" class="page-link">{{page}}</a>
       </li>
-      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item next-item">
-        <a routerLink="/broadcasts" [queryParams]="{ page: pager.currentPage + 1 }" class="page-link">»</a>
+
+      <li *ngIf="!pager.pages.includes(pager.totalPages)" class="page-item disabled">
+        ...
       </li>
+      <li *ngIf="!pager.pages.includes(pager.totalPages)" class="page-item">
+        <a routerLink="/broadcasts" [queryParams]="{ page: pager.totalPages }" class="page-link">{{ pager.totalPages }}</a>
+      </li>
+
       <!--
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item next-item">
+        <a routerLink="/broadcasts" [queryParams]="{ page: pager.currentPage + 1 }" class="page-link">&rsaquo;</a>
+      </li>
       <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item last-item">
-        <a routerLink="/broadcasts" [queryParams]="{ page: pager.totalPages }" class="page-link">»</a>
+        <a routerLink="/broadcasts" [queryParams]="{ page: pager.totalPages }" class="page-link">&raquo;</a>
       </li>
       -->
     </ul>
