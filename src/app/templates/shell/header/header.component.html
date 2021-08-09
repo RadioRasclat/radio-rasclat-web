@@ -52,7 +52,7 @@
             <div class="navigationItemLink">
               <a
                   [ngxTippy]="tippyTemplate"
-                  tippyName="content"
+                  tippyName="navDropdown"
                   [tippyProps]="tippyProps"
               >
                 More
@@ -65,12 +65,22 @@
               <div #tippyTemplate>
                 <div class="navigationDropdownWrapper">
                   <div class="navigationDropdownWrapper__inner">
-                    <a routerLink="/artists">
+                    <a routerLink="/artists" (click)="closeDropdown()">
                       {{ 'artists' | translate }}
                     </a>
-                    <a routerLink="/artists">
+                    <a routerLink="/blog" (click)="closeDropdown()">
+                      {{ 'blog' | translate }}
+                    </a>
+                    <a routerLink="/events" (click)="closeDropdown()">
+                      {{ 'events' | translate }}
+                    </a>
+                    <a href="https://radio-rasclat.chatango.com/" target="_blank" style="display: flex; justify-content: space-between;">
                       {{ 'chat' | translate }}
                       <svg-icon key="external"></svg-icon>
+                    </a>
+                    <hr style="margin: .5rem 0">
+                    <a routerLink="/about" (click)="closeDropdown()">
+                      {{ 'about' | translate }}
                     </a>
                   </div>
                 </div>
